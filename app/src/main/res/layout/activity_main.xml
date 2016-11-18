@@ -10,7 +10,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="ca.utoronto.ece1778.tripstory.MainActivity"
-    android:background="@drawable/maxresdefault">
+    android:background="@drawable/background">
 
     <LinearLayout
         android:orientation="vertical"
@@ -20,142 +20,116 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="80dp"
+            android:background="#33FFFFFF"
+            >
 
             <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:id="@+id/imageView" />
 
             <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:id="@+id/imageView2" />
         </LinearLayout>
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="300dp">
+
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="110dp"
+                android:id="@+id/storyFrame"
+                android:scaleType="fitXY"/>
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Medium Text"
-                android:id="@+id/textView"
-                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:background="#33000000"
+                android:id="@+id/StoryLineText"
                 android:textAlignment="center"
-                android:textSize="20dp"
-                android:textStyle="bold"/>
+                android:textSize="30dp"/>
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                app:srcCompat="@mipmap/ic_launcher"
-                android:id="@+id/storyFrame"
-                android:adjustViewBounds="false"
-                android:cropToPadding="false"
-                android:scaleType="fitXY"/>
         </LinearLayout>
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="250dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginTop="20dp"
+            >
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="125dp"
+                android:layout_weight=".5">
 
                 <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     app:srcCompat="@android:drawable/btn_star_big_on"
                     android:id="@+id/imageButton1"
-                    android:layout_weight=".24"
                     android:clickable="true"
-                    android:scaleType="fitXY"/>
+                    android:background="@null"
+                    android:scaleType="fitXY"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="10dp"/>
 
                 <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     app:srcCompat="@android:drawable/btn_star_big_on"
                     android:id="@+id/imageButton2"
-                    android:layout_weight=".24"
                     android:clickable="true"
-                    android:scaleType="fitXY"/>
+                    android:background="@null"
+                    android:scaleType="fitXY"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="50dp"/>
 
             </LinearLayout>
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="125dp"
+                android:layout_weight=".5"
+                android:layout_gravity="center">
 
                 <ImageButton
                     app:srcCompat="@android:drawable/btn_star_big_on"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:id="@+id/imageButton3"
-                    android:layout_weight=".24"
                     android:clickable="true"
-                    android:scaleType="fitXY"/>
+                    android:background="@null"
+                    android:scaleType="fitXY"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="10dp"/>
 
                 <ImageButton
                     app:srcCompat="@android:drawable/btn_star_big_on"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:id="@+id/imageButton4"
-                    android:layout_weight=".24"
                     android:clickable="true"
-                    android:scaleType="fitXY"/>
+                    android:background="@null"
+                    android:scaleType="fitXY"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="50dp"/>
             </LinearLayout>
         </LinearLayout>
-
-        <!--<LinearLayout-->
-        <!--android:orientation="vertical"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_weight=".25">-->
-
-        <!--<LinearLayout-->
-        <!--android:orientation="horizontal"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content">-->
-
-        <!--<ImageButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--app:srcCompat="@android:drawable/btn_star_big_on"-->
-        <!--android:id="@+id/imageButton4"-->
-        <!--android:layout_weight=".25"-->
-        <!--android:clickable="true"/>-->
-
-
-        <!--<ImageButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--app:srcCompat="@android:drawable/btn_star_big_on"-->
-        <!--android:id="@+id/imageButton5"-->
-        <!--android:layout_weight=".25"-->
-        <!--android:clickable="true"-->
-        <!--/>-->
-
-        <!--<ImageButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--app:srcCompat="@android:drawable/btn_star_big_on"-->
-        <!--android:id="@+id/imageButton6"-->
-        <!--android:layout_weight=".25"-->
-        <!--android:clickable="true"/>-->
-
-        <!--</LinearLayout>-->
-
-
-
-        <!--</LinearLayout>-->
 
     </LinearLayout>
 

@@ -43,8 +43,8 @@ public class MainMenuActivity extends AppCompatActivity {
     File storageDirExtract;
     public File photoFile;
     // Create a storage reference from our app
-    FirebaseStorage storage = FirebaseStorage.getInstance();
-    StorageReference storageRef = storage.getReferenceFromUrl("gs://tripstory-47cf0.appspot.com");
+//    NOV 18 commented out //FirebaseStorage storage = FirebaseStorage.getInstance();
+    //StorageReference storageRef = storage.getReferenceFromUrl("gs://tripstory-47cf0.appspot.com");
     private UploadTask uploadTask;
 
     @Override
