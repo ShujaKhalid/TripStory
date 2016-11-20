@@ -73,11 +73,17 @@ public class Compile extends AppCompatActivity {
     private ImageView pic1, pic2, pic3, pic4, pic5;
 
     public String[][] currstory = new String[][]{
-            {"frame1", "Who do you want to pick as a friend?", "f1_o1", "f1_o2", "f1_o3", "f1_o4", "You picked ", " as a friend"},
-            {"frame2", "You and your friend find what?", "f2_o1", "f2_o2", "f2_o3", "f2_o4", "You and your friend found ", " "},
-            {"frame3", "Suddenly, you see a _________ coming from behind", "f3_o1", "f3_o2", "f3_o3", "f3_o4", "Suddenly, you saw a ", " coming from behind."},
-            {"frame4", "Where do you go to hide away from it?", "f4_o1", "f4_o2", "f4_o3", "f4_o4", "So you hid away in a ", " from it"},
-            {"frame5", "There you find _________ stuck in a net", "f5_o1", "f5_o2", "f5_o3", "f5_o4", "There you found a ", " stuck in a net"}
+            {"f1", "Who do you want to pick as a friend?", "f1o1", "f1o2", "f1o3", "f1o4", "You pick", "as a friend"},
+            {"f2", "You and your friend find what?", "f2o1", "f2o2", "f2o3", "f2o4", "You and your friend find", ""},
+            {"f3", "Suddenly, you see a _________ coming from behind", "f3o1", "f3o2", "f3o3", "f3o4", "Suddenly, you see a", "coming from behind."},
+            {"f4", "Where do you go to hide away from it?", "f4o1", "f4o2", "f4o3", "f4o4", "So you hide away in a", "from it"},
+            {"f5", "There you find _________ stuck in a net", "f5o1", "f5o2", "f5o3", "f5o4", "There you find a", "stuck in a net"}
+//
+//            {"frame1", "Who do you want to pick as a friend?", "f1_o1", "f1_o2", "f1_o3", "f1_o4", "You picked ", " as a friend"},
+//            {"frame2", "You and your friend find what?", "f2_o1", "f2_o2", "f2_o3", "f2_o4", "You and your friend found ", " "},
+//            {"frame3", "Suddenly, you see a _________ coming from behind", "f3_o1", "f3_o2", "f3_o3", "f3_o4", "Suddenly, you saw a ", " coming from behind."},
+//            {"frame4", "Where do you go to hide away from it?", "f4_o1", "f4_o2", "f4_o3", "f4_o4", "So you hid away in a ", " from it"},
+//            {"frame5", "There you find _________ stuck in a net", "f5_o1", "f5_o2", "f5_o3", "f5_o4", "There you found a ", " stuck in a net"}
     };
 
 

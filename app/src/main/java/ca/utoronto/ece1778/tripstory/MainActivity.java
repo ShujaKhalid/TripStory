@@ -22,6 +22,7 @@ import android.widget.Button;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -61,17 +62,22 @@ public class MainActivity extends Activity {
     public Bitmap userimage;
     public String userpal;
     public int userpal_int;
+    public LinearLayout bgElement;
 
     public int currentfame;
     public int[] intarray = new int[10];
 
     public String[][] newstoryarray = new String[][]{
-            {"who", "Who do you want to pick as a friend?", "f1_o1", "f1_o2", "f1_o3", "f1_o4", "You pick", "as a friend"},
-            {"new_frame1", "Who do you want to pick as a friend?", "pic1", "pic2", "pic3", "pic4", "You pick", "as a friend"},
-            {"frame2", "You and your friend find what?", "f2_o1", "f2_o2", "f2_o3", "f2_o4", "You and your friend find", ""},
-            {"frame3", "Suddenly, you see a _________ coming from behind", "f3_o1", "f3_o2", "f3_o3", "f3_o4", "Suddenly, you see a", "coming from behind."},
-            {"frame4", "Where do you go to hide away from it?", "f4_o1", "f4_o2", "f4_o3", "f4_o4", "So you hide away in a", "from it"},
-            {"frame5", "There you find _________ stuck in a net", "f5_o1", "f5_o2", "f5_o3", "f5_o4", "There you find a", "stuck in a net"}
+            {"who", "Who do you want to pick as a friend?", "f1o1", "f1o2", "f1o3", "f1o4", "You pick", "as a friend"},
+            {"f1", "Who do you want to pick as a friend?", "f1o1", "f1o2", "f1o3", "f1o4", "You pick", "as a friend"},
+            {"f2", "You and your friend find what?", "f2o1", "f2o2", "f2o3", "f2o4", "You and your friend find", ""},
+            {"f3", "Suddenly, you see a _________ coming from behind", "f3o1", "f3o2", "f3o3", "f3o4", "Suddenly, you see a", "coming from behind."},
+            {"f4", "Where do you go to hide away from it?", "f4o1", "f4o2", "f4o3", "f4o4", "So you hide away in a", "from it"},
+            {"f5", "There you find _________ stuck in a net", "f5o1", "f5o2", "f5o3", "f5o4", "There you find a", "stuck in a net"}
+    };
+
+    public String[] bkgs = new String[]{
+            "", "bkg1", "bkg2", "bkg3", "bkg4"
     };
 
     @Override
@@ -80,6 +86,7 @@ public class MainActivity extends Activity {
         // Set the layout
         setContentView(R.layout.activity_main);
 
+        LinearLayout bgElement = (LinearLayout) findViewById(R.id.main_bkg);
         currentfame = 1;
         // Get image of personalized user as a bitmap
         SharedPreferences sharedPref = this.getSharedPreferences("ca.utoronto.ece1778.tripstory" , this.MODE_PRIVATE);
@@ -196,6 +203,7 @@ public class MainActivity extends Activity {
                 nextFrameSean();
             }
         });
+//        bgElement.setBackground(this.getResources().getDrawable(R.drawable.bkg1));
     }
 
     public void ininextFrameSean() {
@@ -229,6 +237,9 @@ public class MainActivity extends Activity {
         Bitmap frameImg = ((BitmapDrawable) FrameImg).getBitmap();
         srory_frame.setImageBitmap(frameImg);
         StorylineText.setText(newstoryarray[currentfame][1]);
+
+//        Drawable bkg_img = getDrawable(getResources().getIdentifier(bkgs[currentfame], "drawable", "ca.utoronto.ece1778.tripstory"));
+//        bgElement.setBackground(bkg_img);
     }
 
     public void nextFrameSean()
@@ -265,6 +276,9 @@ public class MainActivity extends Activity {
             srory_frame.setImageBitmap(frameImg);
 
             StorylineText.setText(newstoryarray[currentfame][1]);
+
+//            Drawable bkg_img = getDrawable(getResources().getIdentifier(bkgs[currentfame], "drawable", "ca.utoronto.ece1778.tripstory"));
+//            bgElement.setBackground(bkg_img);
 
         } else {
             Intent intent = new Intent(MainActivity.this, Compile.class);
