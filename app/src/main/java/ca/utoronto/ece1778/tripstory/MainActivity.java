@@ -83,14 +83,14 @@ public class MainActivity extends Activity {
         currentfame = 1;
         // Get image of personalized user as a bitmap
         SharedPreferences sharedPref = this.getSharedPreferences("ca.utoronto.ece1778.tripstory" , this.MODE_PRIVATE);
-        String personUser = sharedPref.getString("personaluser", "null");
-        System.out.println(" personaluser = " + personUser); // If this yields null, the string wasn't accessed properly from shared preferences
+        //Commented Out //String personUser = sharedPref.getString("personaluser", "null");
+        //System.out.println(" personaluser = " + personUser); // If this yields null, the string wasn't accessed properly from shared preferences
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inSampleSize = 8;
         options.inJustDecodeBounds = false;
-        Bitmap result = BitmapFactory.decodeFile(personUser, options);
-        userimage = Bitmap.createScaledBitmap(result,
-                100, 100, false);
+        //Bitmap result = BitmapFactory.decodeFile(personUser, options);
+        //userimage = Bitmap.createScaledBitmap(result,
+        //        100, 100, false);
 
 
         img_view = (ImageView) findViewById(R.id.imageView);
