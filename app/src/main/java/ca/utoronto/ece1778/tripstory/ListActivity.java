@@ -26,8 +26,8 @@ import java.io.File;
 public class ListActivity extends AppCompatActivity{
 
     // Create a storage reference from our app
-    FirebaseStorage storage = FirebaseStorage.getInstance();
-    StorageReference storageRef = storage.getReferenceFromUrl("gs://tripstory-47cf0.appspot.com");
+    // FirebaseStorage storage = FirebaseStorage.getInstance();
+    // StorageReference storageRef = storage.getReferenceFromUrl("gs://tripstory-47cf0.appspot.com");
     private UploadTask uploadTask;
 
     @Override
@@ -42,7 +42,6 @@ public class ListActivity extends AppCompatActivity{
 
         if (fragment == null) {
             fragment = new CardFragment();
-            ;
             fm.beginTransaction()
                     .add(R.id.fragmentContainer, fragment)
                     .commit();
