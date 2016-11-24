@@ -43,8 +43,8 @@ public class MainMenuActivity extends AppCompatActivity {
     File storageDirExtract;
     public File photoFile;
     // Create a storage reference from our app
-//    NOV 18 commented out //FirebaseStorage storage = FirebaseStorage.getInstance();
-    //StorageReference storageRef = storage.getReferenceFromUrl("gs://tripstory-47cf0.appspot.com");
+    FirebaseStorage storage = FirebaseStorage.getInstance();
+    StorageReference storageRef = storage.getReferenceFromUrl("gs://tripstory-47cf0.appspot.com");
     private UploadTask uploadTask;
 
     @Override
@@ -168,8 +168,7 @@ public class MainMenuActivity extends AppCompatActivity {
             System.err.println("photoFile not created =(");
             System.err.println(ex);
         }
-        //The two lines of code below were commented out at first.
-        //They were eventually added when I tried to save it with a custom name and destination
+
         Uri photoURI = FileProvider.getUriForFile(this,
                 "ca.utoronto.ece1778.tripstory.fileprovider",
                 photoFile);

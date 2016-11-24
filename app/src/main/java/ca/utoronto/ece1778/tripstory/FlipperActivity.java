@@ -27,12 +27,12 @@ public class FlipperActivity extends AppCompatActivity {
 
         PageCurlViewzzz pageCurlViewzz = (PageCurlViewzzz) findViewById(R.id.pagecurl_view);
         System.out.println("Image Index = " + R.drawable.zoo);
-        //getResources().getIdentifier( stories.get(position).toString(), "DCIM", "ca.utoronto.ece1778.tripstory");
 
         List<String> pages_id = stories;
-        //pages_id.add(stories);
         pageCurlViewzz.setCurlView(pages_id);
-        pageCurlViewzz.setCurlSpeed(500);
+
+        //pageCurlViewzz.setCurlView(pages_id);
+        //pageCurlViewzz.setCurlSpeed(500);
 
     }
 }

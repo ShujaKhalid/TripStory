@@ -233,7 +233,18 @@ public class PageCurlViewzzz extends View {
 
         mPages = new ArrayList<Bitmap>();
 
+        /* // ----- Commented out for spiral 4! ----- //
         for(int image = 0; image < pages.size(); image++){
+            BitmapFactory.Options options = new BitmapFactory.Options();
+            options.inSampleSize = 8;
+            options.inJustDecodeBounds = false;
+            Bitmap result = BitmapFactory.decodeFile(pages.get(image).toString(), options);
+            mPages.add(result);
+        }
+        */
+
+
+        for(int image = 0; image < 1; image++){
             BitmapFactory.Options options = new BitmapFactory.Options();
             options.inSampleSize = 8;
             options.inJustDecodeBounds = false;
@@ -242,8 +253,9 @@ public class PageCurlViewzzz extends View {
         }
 
         // Create some sample images
-        mForeground = mPages.get(0);
-        mBackground = mPages.get(1);
+        //commented out - sk///mForeground = mPages.get(0);
+        mForeground = mPages.get(mPages.size()-1);
+        //commented out - sk///*mBackground = mPages.get(1); */
 
     }
 
@@ -883,7 +895,7 @@ public class PageCurlViewzzz extends View {
      */
     private void setViews(int foreground, int background) {
         mForeground = mPages.get(foreground);
-        mBackground = mPages.get(background);
+        //commented out - sk///mBackground = mPages.get(background);
     }
 
     //---------------------------------------------------------------
@@ -926,8 +938,8 @@ public class PageCurlViewzzz extends View {
 
         // Draw our elements
         drawForeground(canvas, rect, paint);
-        drawBackground(canvas, rect, paint);
-        drawCurlEdge(canvas);
+        //commented out - sk///drawBackground(canvas, rect, paint);
+        //commented out - sk///drawCurlEdge(canvas);
 
         // Draw any debug info once we are done
         if ( bEnableDebugMode )
@@ -953,7 +965,7 @@ public class PageCurlViewzzz extends View {
         mFlipRadius = getWidth();
 
         ResetClipEdge();
-        DoPageCurl();
+        //commented out - sk///DoPageCurl();
     }
 
     /**
@@ -1136,7 +1148,7 @@ public class PageCurlViewzzz extends View {
 
     private float debugDrawPoint(Canvas canvas, String name, float X, float Y, int color, float posX, float posY) {
         mTextPaint.setColor(color);
-        drawTextShadowed(canvas,name,posX , posY, mTextPaint,mTextPaintShadow);
+        drawTextShadowed(canvas, name, posX , posY, mTextPaint, mTextPaintShadow);
         Paint paint = new Paint();
         paint.setStrokeWidth(5);
         paint.setColor(color);

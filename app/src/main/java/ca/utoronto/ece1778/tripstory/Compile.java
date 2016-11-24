@@ -54,8 +54,8 @@ import java.util.Date;
 public class Compile extends AppCompatActivity {
 
     // Create a storage reference from our app
-    //commented out//FirebaseStorage storage = FirebaseStorage.getInstance();
-    //commented out//StorageReference storageRef = storage.getReferenceFromUrl("gs://tripstory-47cf0.appspot.com");
+    FirebaseStorage storage = FirebaseStorage.getInstance();
+    StorageReference storageRef = storage.getReferenceFromUrl("gs://tripstory-47cf0.appspot.com");
     private UploadTask uploadTask;
     private TextView story;
     private Button back;
@@ -289,7 +289,7 @@ public class Compile extends AppCompatActivity {
                 .build();
 
         // Upload file and metadata to the path 'images/mountains.jpg'
-        // NOV 18 commentedout//uploadTask = storageRef.child("images/"+file.getLastPathSegment()).putFile(file, metadata);
+        uploadTask = storageRef.child("images/"+file.getLastPathSegment()).putFile(file, metadata);
 
         // Listen for state changes, errors, and completion of the upload.
         uploadTask.addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {

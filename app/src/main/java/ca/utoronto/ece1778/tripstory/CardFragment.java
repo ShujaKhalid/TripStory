@@ -182,7 +182,7 @@ public class CardFragment extends Fragment {
         for(int i=0;i<Stories.size();i++){
             StoryModel item = new StoryModel();
             // It is going to be only underwater adventure for the time being ...
-            item.setCardName("Underwater Adventure " + i+1);
+            item.setCardName("Underwater Adventure " + i);
             item.setImageResourceId(getResources().getIdentifier("scuba", "drawable", "ca.utoronto.ece1778.tripstory"));
 
             item.setIsfav(0);
