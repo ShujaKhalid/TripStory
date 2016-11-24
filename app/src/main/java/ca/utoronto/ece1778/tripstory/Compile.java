@@ -66,19 +66,35 @@ public class Compile extends AppCompatActivity {
             text1_2, text2_2,
             text1_3, text2_3,
             text1_4, text2_4,
-            text1_5, text2_5;
+            text1_5, text2_5,
+            text1_6, text2_6,
+            text1_7, text2_7,
+            text1_8, text2_8,
+            text1_9, text2_9,
+            text1_10, text2_10;
 
     private int[] arrayB;
     private int buddy;
-    private ImageView pic1, pic2, pic3, pic4, pic5;
+    private ImageView pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9, pic10;
 
     public String[][] currstory = new String[][]{
-            {"f1", "Who do you want to pick as a friend?", "f1o1", "f1o2", "f1o3", "f1o4", "You pick", "as a friend"},
-            {"f2", "You and your friend find what?", "f2o1", "f2o2", "f2o3", "f2o4", "You and your friend find", ""},
-            {"f3", "Suddenly, you see a _________ coming from behind", "f3o1", "f3o2", "f3o3", "f3o4", "Suddenly, you see a", "coming from behind."},
-            {"f4", "Where do you go to hide away from it?", "f4o1", "f4o2", "f4o3", "f4o4", "So you hide away in a", "from it"},
-            {"f5", "There you find _________ stuck in a net", "f5o1", "f5o2", "f5o3", "f5o4", "There you find a", "stuck in a net"}
+            {"f1", "Who do you want to pick as a friend?", "f1o1", "f1o2", "f1o3", "f1o4", "I picked an", " as a friend"},
+            {"f2", "You and your friend find what?", "f2o1", "f2o2", "f2o3", "f2o4", "Me and my friend found a ", ""},
+            {"f3", "Suddenly, you see a _________ coming from behind", "f3o1", "f3o2", "f3o3", "f3o4", "Suddenly, I saw a ", " coming from behind."},
+            {"f4", "Where do you go to hide away from it?", "f4o1", "f4o2", "f4o3", "f4o4", "So I hid away in a ", " from it"},
+            {"f5", "There you find _________ stuck in a net", "f5o1", "f5o2", "f5o3", "f5o4", "There I found a ", " stuck in a net"},
+            {"f6", "You use a ________ to cut the net and set it free", "f6o1", "f6o2", "f6o3", "f6o4", "So I used a ", "to cut the net and set it free"},
+            {"f7", "You received a __________ as a gift for helping", "f7o1", "f7o2", "f7o3", "f7o4", "I then received a ", " as a gift for helping"},
+            {"f8", "A mermaid met you and took you to the ________", "f8o1", "f8o2", "f8o3", "f8o4", "A mermaid met me and took you to the ", ""},
+            {"f9", "There you started following the  ________", "f9o1", "f9o2", "f9o3", "f9o4", "There i started following the  ", ""},
+            {"f10", "They take you to a treasure map of the ________ ", "f10o1", "f10o2", "f10o3", "f10o4", "They took me to a treasure map of the  ", ""}
 //
+//            {"f1", "Who do you want to pick as a friend?", "f1o1", "f1o2", "f1o3", "f1o4", "You pick", "as a friend"},
+//            {"f2", "You and your friend find what?", "f2o1", "f2o2", "f2o3", "f2o4", "You and your friend find", ""},
+//            {"f3", "Suddenly, you see a _________ coming from behind", "f3o1", "f3o2", "f3o3", "f3o4", "Suddenly, you see a", "coming from behind."},
+//            {"f4", "Where do you go to hide away from it?", "f4o1", "f4o2", "f4o3", "f4o4", "So you hide away in a", "from it"},
+//            {"f5", "There you find _________ stuck in a net", "f5o1", "f5o2", "f5o3", "f5o4", "There you find a", "stuck in a net"}
+////
 //            {"frame1", "Who do you want to pick as a friend?", "f1_o1", "f1_o2", "f1_o3", "f1_o4", "You picked ", " as a friend"},
 //            {"frame2", "You and your friend find what?", "f2_o1", "f2_o2", "f2_o3", "f2_o4", "You and your friend found ", " "},
 //            {"frame3", "Suddenly, you see a _________ coming from behind", "f3_o1", "f3_o2", "f3_o3", "f3_o4", "Suddenly, you saw a ", " coming from behind."},
@@ -112,12 +128,27 @@ public class Compile extends AppCompatActivity {
         text2_4 = (TextView) findViewById(R.id.text2_4);
         text1_5 = (TextView) findViewById(R.id.text1_5);
         text2_5 = (TextView) findViewById(R.id.text2_5);
+        text1_6 = (TextView) findViewById(R.id.text1_6);
+        text2_6 = (TextView) findViewById(R.id.text2_6);
+        text1_7 = (TextView) findViewById(R.id.text1_7);
+        text2_7 = (TextView) findViewById(R.id.text2_7);
+        text1_8 = (TextView) findViewById(R.id.text1_8);
+        text2_8 = (TextView) findViewById(R.id.text2_8);
+        text1_9 = (TextView) findViewById(R.id.text1_9);
+        text2_9 = (TextView) findViewById(R.id.text2_9);
+        text1_10 = (TextView) findViewById(R.id.text1_10);
+        text2_10 = (TextView) findViewById(R.id.text2_10);
 
         pic1 = (ImageView) findViewById(R.id.pic1);
         pic2 = (ImageView) findViewById(R.id.pic2);
         pic3 = (ImageView) findViewById(R.id.pic3);
         pic4 = (ImageView) findViewById(R.id.pic4);
         pic5 = (ImageView) findViewById(R.id.pic5);
+        pic6 = (ImageView) findViewById(R.id.pic6);
+        pic7 = (ImageView) findViewById(R.id.pic7);
+        pic8 = (ImageView) findViewById(R.id.pic8);
+        pic9 = (ImageView) findViewById(R.id.pic9);
+        pic10 = (ImageView) findViewById(R.id.pic10);
 
 //        Bundle extras = getIntent().getExtras();
 //        int[] arrayB = extras.getIntArray("myStoryint");
@@ -133,29 +164,60 @@ public class Compile extends AppCompatActivity {
         pic1.setImageBitmap(anImage1);
         text2.setText(currstory[0][7]);
 
-        Drawable myDrawable2 = getDrawable(getResources().getIdentifier(currstory[1][arrayB[1]+2],"drawable","ca.utoronto.ece1778.tripstory"));
+        Drawable myDrawable2 = getDrawable(getResources().getIdentifier(currstory[1][arrayB[2]+2],"drawable","ca.utoronto.ece1778.tripstory"));
         Bitmap anImage2      = ((BitmapDrawable) myDrawable2).getBitmap();
         text1_2.setText(currstory[1][6]);
         pic2.setImageBitmap(anImage2);
         text2_2.setText(currstory[1][7]);
 
-        Drawable myDrawable3 = getDrawable(getResources().getIdentifier(currstory[2][arrayB[2]+2],"drawable","ca.utoronto.ece1778.tripstory"));
+        Drawable myDrawable3 = getDrawable(getResources().getIdentifier(currstory[2][arrayB[3]+2],"drawable","ca.utoronto.ece1778.tripstory"));
         Bitmap anImage3      = ((BitmapDrawable) myDrawable3).getBitmap();
         text1_3.setText(currstory[2][6]);
         pic3.setImageBitmap(anImage3);
         text2_3.setText(currstory[2][7]);
 
-        Drawable myDrawable4 = getDrawable(getResources().getIdentifier(currstory[3][arrayB[3]+2],"drawable","ca.utoronto.ece1778.tripstory"));
+        Drawable myDrawable4 = getDrawable(getResources().getIdentifier(currstory[3][arrayB[4]+2],"drawable","ca.utoronto.ece1778.tripstory"));
         Bitmap anImage4      = ((BitmapDrawable) myDrawable4).getBitmap();
         text1_4.setText(currstory[3][6]);
         pic4.setImageBitmap(anImage4);
         text2_4.setText(currstory[3][7]);
 
-        Drawable myDrawable5 = getDrawable(getResources().getIdentifier(currstory[4][arrayB[4]+2], "drawable", "ca.utoronto.ece1778.tripstory"));
+        Drawable myDrawable5 = getDrawable(getResources().getIdentifier(currstory[4][arrayB[5]+2], "drawable", "ca.utoronto.ece1778.tripstory"));
         Bitmap anImage5 = ((BitmapDrawable) myDrawable5).getBitmap();
         text1_5.setText(currstory[4][6]);
         pic5.setImageBitmap(anImage5);
         text2_5.setText(currstory[4][7]);
+
+
+        Drawable myDrawable6 = getDrawable(getResources().getIdentifier(currstory[5][arrayB[6]+2], "drawable", "ca.utoronto.ece1778.tripstory"));
+        Bitmap anImage6 = ((BitmapDrawable) myDrawable6).getBitmap();
+        text1_6.setText(currstory[5][6]);
+        pic6.setImageBitmap(anImage6);
+        text2_6.setText(currstory[5][7]);
+
+        Drawable myDrawable7 = getDrawable(getResources().getIdentifier(currstory[6][arrayB[7]+2], "drawable", "ca.utoronto.ece1778.tripstory"));
+        Bitmap anImage7 = ((BitmapDrawable) myDrawable7).getBitmap();
+        text1_7.setText(currstory[6][6]);
+        pic7.setImageBitmap(anImage7);
+        text2_7.setText(currstory[6][7]);
+
+        Drawable myDrawable8 = getDrawable(getResources().getIdentifier(currstory[7][arrayB[8]+2], "drawable", "ca.utoronto.ece1778.tripstory"));
+        Bitmap anImage8 = ((BitmapDrawable) myDrawable8).getBitmap();
+        text1_8.setText(currstory[7][6]);
+        pic8.setImageBitmap(anImage8);
+        text2_8.setText(currstory[7][7]);
+
+        Drawable myDrawable9 = getDrawable(getResources().getIdentifier(currstory[8][arrayB[9]+2], "drawable", "ca.utoronto.ece1778.tripstory"));
+        Bitmap anImage9 = ((BitmapDrawable) myDrawable9).getBitmap();
+        text1_9.setText(currstory[8][6]);
+        pic9.setImageBitmap(anImage9);
+        text2_9.setText(currstory[8][7]);
+
+        Drawable myDrawable10 = getDrawable(getResources().getIdentifier(currstory[9][arrayB[10]+2], "drawable", "ca.utoronto.ece1778.tripstory"));
+        Bitmap anImage10 = ((BitmapDrawable) myDrawable10).getBitmap();
+        text1_10.setText(currstory[9][6]);
+        pic10.setImageBitmap(anImage10);
+        text2_10.setText(currstory[9][7]);
 
 
 

@@ -3,12 +3,12 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
     >
 
 <RelativeLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
 
     <ScrollView
         android:layout_width="wrap_content"
@@ -22,41 +22,42 @@
             android:weightSum="1">
 
             <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:layout_gravity="left"
+            android:layout_margin="10dp"
+            android:textAlignment="center"
+            android:layout_weight="0.49"
+            android:background="#80FFFFFF"
+            android:paddingLeft="20dp"
+            >
+            <TextView
+                android:text="First Part of the text"
                 android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:orientation="horizontal"
-                android:layout_gravity="left"
-                android:layout_margin="10dp"
-                android:textAlignment="center"
-                android:layout_weight="0.49"
-                android:background="#33FFFFFF"
-                >
-                <TextView
-                    android:text="First Part of the text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/text1"
-                    android:textColor="#090909"
-                    android:layout_gravity="center"
-                    android:textSize="20dp"/>
+                android:layout_height="wrap_content"
+                android:id="@+id/text1"
+                android:textColor="#090909"
+                android:layout_gravity="center"
+                android:textSize="20dp"/>
 
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:id="@+id/pic1"
-                    android:src="@drawable/f1o1"
-                    />
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/pic1"
+                android:src="@drawable/fish"
+                />
 
-                <TextView
-                    android:text="Second Part"
-                    android:layout_width="200dp"
-                    android:layout_height="30dp"
-                    android:id="@+id/text2"
-                    android:textColor="#090909"
-                    android:layout_gravity="center"
-                    android:textSize="20sp"
-                    />
-            </LinearLayout>
+            <TextView
+                android:text="Second Part"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:id="@+id/text2"
+                android:textColor="#090909"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                />
+        </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -65,7 +66,8 @@
                 android:layout_gravity="left"
                 android:layout_margin="10dp"
                 android:textAlignment="center"
-                android:background="#33FFFFFF">
+                android:background="#80FFFFFF"
+                android:paddingLeft="20dp">
                 <TextView
                     android:text="First Part of the text"
                     android:layout_width="wrap_content"
@@ -79,7 +81,7 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:id="@+id/pic2"
-                    android:src="@drawable/f1o1"
+                    android:src="@drawable/fish"
                     />
 
                 <TextView
@@ -98,7 +100,8 @@
                 android:orientation="horizontal"
                 android:layout_gravity="left"
                 android:layout_margin="10dp"
-                android:background="#33FFFFFF"
+                android:background="#80FFFFFF"
+                android:paddingLeft="20dp"
                 >
                 <TextView
                     android:text="First Part of the text"
@@ -113,7 +116,7 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:id="@+id/pic3"
-                    android:src="@drawable/f1o1"
+                    android:src="@drawable/fish"
                     />
 
                 <TextView
@@ -132,7 +135,8 @@
                 android:orientation="horizontal"
                 android:layout_gravity="left"
                 android:layout_margin="10dp"
-                android:background="#33FFFFFF"
+                android:background="#80FFFFFF"
+                android:paddingLeft="20dp"
                 >
                 <TextView
                     android:text="First Part of the text"
@@ -147,7 +151,7 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:id="@+id/pic4"
-                    android:src="@drawable/f1o1"
+                    android:src="@drawable/fish"
                     />
 
                 <TextView
@@ -166,7 +170,8 @@
                 android:orientation="horizontal"
                 android:layout_gravity="left"
                 android:layout_margin="10dp"
-                android:background="#33FFFFFF"
+                android:background="#80FFFFFF"
+                android:paddingLeft="20dp"
                 >
                 <TextView
                     android:text="First Part of the text"
@@ -181,7 +186,7 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:id="@+id/pic5"
-                    android:src="@drawable/f1o1"
+                    android:src="@drawable/fish"
                     />
 
                 <TextView
@@ -193,6 +198,185 @@
                     android:layout_gravity="center"
                     android:textSize="20dp"/>
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:layout_gravity="left"
+                android:layout_margin="10dp"
+                android:textAlignment="center"
+                android:layout_weight="0.49"
+                android:background="#80FFFFFF"
+                android:paddingLeft="20dp"
+                >
+                <TextView
+                    android:text="First Part of the text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text1_6"
+                    android:textColor="#090909"
+                    android:layout_gravity="center"
+                    android:textSize="20dp"/>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/pic6"
+                    android:src="@drawable/fish"
+                    />
+
+                <TextView
+                    android:text="Second Part"
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/text2_6"
+                    android:textColor="#090909"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="left"
+                android:layout_margin="10dp"
+                android:textAlignment="center"
+                android:background="#80FFFFFF"
+                android:paddingLeft="20dp">
+                <TextView
+                    android:text="First Part of the text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text1_7"
+                    android:textColor="#090909"
+                    android:layout_gravity="center"
+                    android:textSize="20dp"/>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/pic7"
+                    android:src="@drawable/fish"
+                    />
+
+                <TextView
+                    android:text="Second Part"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text2_7"
+                    android:textColor="#090909"
+                    android:layout_gravity="center"
+                    android:textSize="20dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="left"
+                android:layout_margin="10dp"
+                android:background="#80FFFFFF"
+                android:paddingLeft="20dp"
+                >
+                <TextView
+                    android:text="First Part of the text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text1_8"
+                    android:textColor="#090909"
+                    android:layout_gravity="center"
+                    android:textSize="20dp"/>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/pic8"
+                    android:src="@drawable/fish"
+                    />
+
+                <TextView
+                    android:text="Second Part"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text2_8"
+                    android:textColor="#090909"
+                    android:layout_gravity="center"
+                    android:textSize="20dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="left"
+                android:layout_margin="10dp"
+                android:background="#80FFFFFF"
+                android:paddingLeft="20dp"
+                >
+                <TextView
+                    android:text="First Part of the text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text1_9"
+                    android:textColor="#090909"
+                    android:layout_gravity="center"
+                    android:textSize="20dp"/>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/pic9"
+                    android:src="@drawable/fish"
+                    />
+
+                <TextView
+                    android:text="Second Part"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text2_9"
+                    android:textColor="#090909"
+                    android:layout_gravity="center"
+                    android:textSize="20dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="left"
+                android:layout_margin="10dp"
+                android:background="#80FFFFFF"
+                android:paddingLeft="20dp"
+                >
+                <TextView
+                    android:text="First Part of the text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text1_10"
+                    android:textColor="#090909"
+                    android:layout_gravity="center"
+                    android:textSize="20dp"/>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/pic10"
+                    android:src="@drawable/fish"
+                    />
+
+                <TextView
+                    android:text="Second Part"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text2_10"
+                    android:textColor="#090909"
+                    android:layout_gravity="center"
+                    android:textSize="20dp"/>
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

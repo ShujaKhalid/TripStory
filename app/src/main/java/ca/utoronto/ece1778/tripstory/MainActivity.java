@@ -65,15 +65,20 @@ public class MainActivity extends Activity {
     public LinearLayout bgElement;
 
     public int currentfame;
-    public int[] intarray = new int[10];
+    public int[] intarray = new int[15];
 
     public String[][] newstoryarray = new String[][]{
-            {"who", "Who do you want to pick as a friend?", "f1o1", "f1o2", "f1o3", "f1o4", "You pick", "as a friend"},
-            {"f1", "Who do you want to pick as a friend?", "f1o1", "f1o2", "f1o3", "f1o4", "You pick", "as a friend"},
-            {"f2", "You and your friend find what?", "f2o1", "f2o2", "f2o3", "f2o4", "You and your friend find", ""},
-            {"f3", "Suddenly, you see a _________ coming from behind", "f3o1", "f3o2", "f3o3", "f3o4", "Suddenly, you see a", "coming from behind."},
-            {"f4", "Where do you go to hide away from it?", "f4o1", "f4o2", "f4o3", "f4o4", "So you hide away in a", "from it"},
-            {"f5", "There you find _________ stuck in a net", "f5o1", "f5o2", "f5o3", "f5o4", "There you find a", "stuck in a net"}
+            {"who", "Who do you want to pick as a friend?", "f1o1", "f1o2", "f1o3", "f1o4", "I picked an", " as a friend"},
+            {"f1", "Who do you want to pick as a friend?", "f1o1", "f1o2", "f1o3", "f1o4", "I picked an", " as a friend"},
+            {"f2", "You and your friend find what?", "f2o1", "f2o2", "f2o3", "f2o4", "Me and my friend found a ", ""},
+            {"f3", "Suddenly, you see a _________ coming from behind", "f3o1", "f3o2", "f3o3", "f3o4", "Suddenly, I saw a ", " coming from behind."},
+            {"f4", "Where do you go to hide away from it?", "f4o1", "f4o2", "f4o3", "f4o4", "So I hid away in a ", " from it"},
+            {"f5", "There you find _________ stuck in a net", "f5o1", "f5o2", "f5o3", "f5o4", "There I found a ", " stuck in a net"},
+            {"f6", "You use a ________ to cut the net and set it free", "f6o1", "f6o2", "f6o3", "f6o4", "So I used a ", "to cut the net and set it free"},
+            {"f7", "You received a __________ as a gift for helping", "f7o1", "f7o2", "f7o3", "f7o4", "I then received a ", " as a gift for helping"},
+            {"f8", "A mermaid met you and took you to the ________", "f8o1", "f8o2", "f8o3", "f8o4", "A mermaid met me and took you to the ", ""},
+            {"f9", "There you started following the  ________", "f9o1", "f9o2", "f9o3", "f9o4", "There i started following the  ", ""},
+            {"f10", "They take you to a treasure map of the ________ ", "f10o1", "f10o2", "f10o3", "f10o4", "They took me to a treasure map of the  ", ""}
     };
 
     public String[] bkgs = new String[]{
@@ -111,46 +116,46 @@ public class MainActivity extends Activity {
         srory_frame = (ImageView) findViewById(R.id.storyFrame);
         StorylineText = (TextView) findViewById(R.id.StoryLineText);
 
-        img_b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (currentfame == 0) {
-                    userpal = "f1_o1";
-                    userpal_int = 2;
-                }
-                nextFrameSean();
-            }
-        });
-        img_b2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (currentfame == 0) {
-                    userpal = "f1_o2";
-                    userpal_int = 3;
-                }
-                nextFrameSean();
-            }
-        });
-        img_b3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (currentfame == 0) {
-                    userpal = "f1_o3";
-                    userpal_int = 4;
-                }
-                nextFrameSean();
-            }
-        });
-        img_b4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (currentfame == 0) {
-                    userpal = "f1_o3";
-                    userpal_int = 5;
-                }
-                nextFrameSean();
-            }
-        });
+//        img_b1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (currentfame == 0) {
+//                    userpal = "f1_o1";
+//                    userpal_int = 2;
+//                }
+//                nextFrameSean();
+//            }
+//        });
+//        img_b2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (currentfame == 0) {
+//                    userpal = "f1_o2";
+//                    userpal_int = 3;
+//                }
+//                nextFrameSean();
+//            }
+//        });
+//        img_b3.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (currentfame == 0) {
+//                    userpal = "f1_o3";
+//                    userpal_int = 4;
+//                }
+//                nextFrameSean();
+//            }
+//        });
+//        img_b4.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (currentfame == 0) {
+//                    userpal = "f1_o3";
+//                    userpal_int = 5;
+//                }
+//                nextFrameSean();
+//            }
+//        });
 
 //        SET INITIAL VIEW
         ininextFrameSean();
@@ -208,8 +213,8 @@ public class MainActivity extends Activity {
     }
 
     public void ininextFrameSean() {
-
-        Toast.makeText(MainActivity.this, Integer.toString(userpal_int), Toast.LENGTH_SHORT).show();
+//
+//        Toast.makeText(MainActivity.this, Integer.toString(userpal_int), Toast.LENGTH_SHORT).show();
 
         Drawable myDrawable_pal = getDrawable(getResources().getIdentifier(newstoryarray[0][userpal_int], "drawable", "ca.utoronto.ece1778.tripstory"));
         Bitmap anImage_pal = ((BitmapDrawable) myDrawable_pal).getBitmap();
@@ -247,7 +252,7 @@ public class MainActivity extends Activity {
     {
         if (currentfame<newstoryarray.length-1){
 
-            Toast.makeText(MainActivity.this,Integer.toString(userpal_int), Toast.LENGTH_SHORT).show();
+//            Toast.makeText(MainActivity.this,Integer.toString(userpal_int), Toast.LENGTH_SHORT).show();
             Drawable myDrawable_pal = getDrawable(getResources().getIdentifier(newstoryarray[0][userpal_int], "drawable", "ca.utoronto.ece1778.tripstory"));
             Bitmap anImage_pal = ((BitmapDrawable) myDrawable_pal).getBitmap();
             img_view2.setImageBitmap(anImage_pal);
