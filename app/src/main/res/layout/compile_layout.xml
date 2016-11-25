@@ -121,7 +121,7 @@
 
                 <TextView
                     android:text="Second Part"
-                    android:layout_width="200dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/text2_3"
                     android:textColor="#090909"
@@ -156,7 +156,7 @@
 
                 <TextView
                     android:text="Second Part"
-                    android:layout_width="200dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/text2_4"
                     android:textColor="#090909"
@@ -191,7 +191,7 @@
 
                 <TextView
                     android:text="Second Part"
-                    android:layout_width="200dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/text2_5"
                     android:textColor="#090909"
@@ -228,8 +228,8 @@
 
                 <TextView
                     android:text="Second Part"
-                    android:layout_width="200dp"
-                    android:layout_height="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:id="@+id/text2_6"
                     android:textColor="#090909"
                     android:layout_gravity="center"
@@ -264,7 +264,7 @@
 
                 <TextView
                     android:text="Second Part"
-                    android:layout_width="200dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/text2_7"
                     android:textColor="#090909"
@@ -283,7 +283,7 @@
                 >
                 <TextView
                     android:text="First Part of the text"
-                    android:layout_width="wrap_content"
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/text1_8"
                     android:textColor="#090909"
@@ -299,7 +299,7 @@
 
                 <TextView
                     android:text="Second Part"
-                    android:layout_width="200dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/text2_8"
                     android:textColor="#090909"
@@ -334,7 +334,7 @@
 
                 <TextView
                     android:text="Second Part"
-                    android:layout_width="200dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/text2_9"
                     android:textColor="#090909"
@@ -353,11 +353,10 @@
                 >
                 <TextView
                     android:text="First Part of the text"
-                    android:layout_width="wrap_content"
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/text1_10"
                     android:textColor="#090909"
-                    android:layout_gravity="center"
                     android:textSize="20dp"/>
 
                 <ImageView
@@ -369,11 +368,10 @@
 
                 <TextView
                     android:text="Second Part"
-                    android:layout_width="200dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/text2_10"
                     android:textColor="#090909"
-                    android:layout_gravity="center"
                     android:textSize="20dp"/>
             </LinearLayout>
 
