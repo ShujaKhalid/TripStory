@@ -6,6 +6,11 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffXfermode;
+import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -27,6 +32,7 @@ public class MainActivity extends Activity {
     private ImageView img_view2;
     private TextView StorylineText;
     public Bitmap userimage;
+    public Bitmap userimage2;
     public String userpal;
     public int userpal_int;
     public LinearLayout bgElement;
@@ -34,7 +40,7 @@ public class MainActivity extends Activity {
 
 
     public int currentfame;
-    public int[] intarray = new int[15];
+    public int[] intarray = new int[20];
 
     public String[][] newstoryarray = new String[][]{
             {"who", "Who do you want to pick as a friend?", "f1o1", "f1o2", "f1o3", "f1o4", "I picked an", " as a friend"},
@@ -48,11 +54,11 @@ public class MainActivity extends Activity {
             {"f8", "A mermaid met you and took you to the ________", "f8o1", "f8o2", "f8o3", "f8o4", "A mermaid met me and took you to the ", ""},
             {"f9", "There you started following the  ________", "f9o1", "f9o2", "f9o3", "f9o4", "There i started following the  ", ""},
             {"f10", "They take you to a treasure map of the ________ ", "f10o1", "f10o2", "f10o3", "f10o4", "They took me to a treasure map of the  ", ""},
-            {"f11", "A rainbow fish took you back to __________", "f8o1", "f8o2", "f8o3", "f8o4", "There I found a ", " stuck in a net"},
-            {"f12", "There you found a ______ hiding in a sand castle.", "f12o1", "f12o2", "f12o3", "f12o4", "So I used a ", "to cut the net and set it free"},
-            {"f13", "It took you surfing on a ________", "f13o1", "f13o2", "f13o3", "f13o4", "I then received a ", " as a gift for helping"},
-            {"f14", "You reached the shore and see your ______", "f14o1", "f14o2", "f14o3", "f14o4", "A mermaid met me and took you to the ", ""},
-            {"f15", "You use it to go __________", "f15o1", "f15o2", "f15o3", "f15o4", "There i started following the  ", ""}
+            {"f11", "A rainbow fish took you back to __________", "f8o1", "f8o2", "f8o3", "f8o4", "A rainbow fish took me back to ", ""},
+            {"f12", "There you found a ______ hiding in a sand castle.", "f12o1", "f12o2", "f12o3", "f12o4", "There I found a ", " hiding in a sand castle."},
+            {"f13", "It took you surfing on a ________", "f13o1", "f13o2", "f13o3", "f13o4", "It took me surfing on a ", ""},
+            {"f14", "You reached the shore and see your ______", "f14o1", "f14o2", "f14o3", "f14o4", "I reached the shore and see my ", ""},
+            {"f15", "You use it to go __________", "f15o1", "f15o2", "f15o3", "f15o4", "I used it to go ", ""}
 
     };
 
@@ -78,7 +84,8 @@ public class MainActivity extends Activity {
         Bitmap result = BitmapFactory.decodeFile(personUser, options);
         Bitmap orientedBitmap = ExifUtil.rotateBitmap(personUser, result);
         userimage = Bitmap.createScaledBitmap(orientedBitmap,
-                100, 100, false);
+                200, 200, false);
+        userimage2 = getRoundedRectBitmap(userimage, 200);
 
 
         img_view = (ImageView) findViewById(R.id.imageView);
@@ -196,7 +203,7 @@ public class MainActivity extends Activity {
         img_view2.setImageBitmap(anImage_pal);
 
         // Set the user's image!
-        img_view.setImageBitmap(userimage);
+        img_view.setImageBitmap(userimage2);
 
         Drawable myDrawable1 = getDrawable(getResources().getIdentifier(newstoryarray[currentfame][2], "drawable", "ca.utoronto.ece1778.tripstory"));
         Bitmap anImage1 = ((BitmapDrawable) myDrawable1).getBitmap();
@@ -344,6 +351,29 @@ public class MainActivity extends Activity {
 
     public void stopVibrate(View v) {
         vibrator.cancel();
+    }
+
+    public static Bitmap getRoundedRectBitmap(Bitmap bitmap, int pixels) {
+        Bitmap result = null;
+        try {
+            result = Bitmap.createBitmap(200, 200, Bitmap.Config.ARGB_8888);
+            Canvas canvas = new Canvas(result);
+
+            int color = 0xff424242;
+            Paint paint = new Paint();
+            Rect rect = new Rect(0, 0, 200, 200);
+
+            paint.setAntiAlias(true);
+            canvas.drawARGB(0, 0, 0, 0);
+            paint.setColor(color);
+            canvas.drawCircle(100, 100, 100, paint);
+            paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
+            canvas.drawBitmap(bitmap, rect, rect, paint);
+
+        } catch (NullPointerException e) {
+        } catch (OutOfMemoryError o) {
+        }
+        return result;
     }
 
 }
