@@ -78,7 +78,13 @@ public class MainActivity extends Activity {
             {"f7", "You received a __________ as a gift for helping", "f7o1", "f7o2", "f7o3", "f7o4", "I then received a ", " as a gift for helping"},
             {"f8", "A mermaid met you and took you to the ________", "f8o1", "f8o2", "f8o3", "f8o4", "A mermaid met me and took you to the ", ""},
             {"f9", "There you started following the  ________", "f9o1", "f9o2", "f9o3", "f9o4", "There i started following the  ", ""},
-            {"f10", "They take you to a treasure map of the ________ ", "f10o1", "f10o2", "f10o3", "f10o4", "They took me to a treasure map of the  ", ""}
+            {"f10", "They take you to a treasure map of the ________ ", "f10o1", "f10o2", "f10o3", "f10o4", "They took me to a treasure map of the  ", ""},
+            {"f11", "A rainbow fish took you back to __________", "f8o1", "f8o2", "f8o3", "f8o4", "There I found a ", " stuck in a net"},
+            {"f12", "There you found a ______ hiding in a sand castle.", "f12o1", "f12o2", "f12o3", "f12o4", "So I used a ", "to cut the net and set it free"},
+            {"f13", "It took you surfing on a ________", "f13o1", "f13o2", "f13o3", "f13o4", "I then received a ", " as a gift for helping"},
+            {"f14", "You reached the shore and see your ______", "f14o1", "f14o2", "f14o3", "f14o4", "A mermaid met me and took you to the ", ""},
+            {"f15", "You use it to go __________", "f15o1", "f15o2", "f15o3", "f15o4", "There i started following the  ", ""}
+
     };
 
     public String[] bkgs = new String[]{
