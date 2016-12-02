@@ -6,48 +6,15 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.os.Build;
-import android.os.Environment;
-import android.provider.MediaStore;
-import android.support.annotation.IntegerRes;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.net.URL;
-import java.nio.charset.Charset;
-import java.security.PublicKey;
-import java.sql.Array;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import io.realm.Realm;
-import io.realm.RealmConfiguration;
-import io.realm.RealmResults;
 
 public class MainActivity extends Activity {
 
@@ -63,6 +30,8 @@ public class MainActivity extends Activity {
     public String userpal;
     public int userpal_int;
     public LinearLayout bgElement;
+    public Vibrator vibrator;
+
 
     public int currentfame;
     public int[] intarray = new int[15];
@@ -258,6 +227,72 @@ public class MainActivity extends Activity {
     {
         if (currentfame<newstoryarray.length-1){
 
+
+
+            if (currentfame == 3) {
+
+                Intent intent = new Intent(MainActivity.this, AnimationActivity.class);
+
+                //Start theme selector activity
+                startActivity(intent);
+
+            } else {
+                    // Do nothing
+            }
+
+            System.out.println("Playing Videos!");
+
+            /*
+            if (currentfame == 4) {
+
+                final ImageView imageView = (ImageView)findViewById(R.id.imageView);
+                imageView.setVisibility(View.GONE);
+                final ImageView imageView2 = (ImageView)findViewById(R.id.imageView2);
+                imageView2.setVisibility(View.GONE);
+                final ImageButton imageButton1 = (ImageButton)findViewById(R.id.imageButton1);
+                imageButton1.setVisibility(View.GONE);
+                final ImageButton imageButton2 = (ImageButton)findViewById(R.id.imageButton2);
+                imageButton2.setVisibility(View.GONE);
+                final ImageButton imageButton3 = (ImageButton)findViewById(R.id.imageButton3);
+                imageButton3.setVisibility(View.GONE);
+                final ImageButton imageButton4 = (ImageButton)findViewById(R.id.imageButton4);
+                imageButton4.setVisibility(View.GONE);
+                final TextView StoryLineText = (TextView)findViewById(R.id.StoryLineText);
+                StoryLineText.setVisibility(View.GONE);
+                final ImageView storyFrame = (ImageView)findViewById(R.id.storyFrame);
+                storyFrame.setVisibility(View.GONE);
+                PlayGifView pGif = (PlayGifView) findViewById(R.id.viewGif);
+                pGif.setImageResource(R.raw.bubbles);
+
+            } else {
+
+                PlayGifView pGif = (PlayGifView) findViewById(R.id.viewGif);
+                final ImageView imageView = (ImageView)findViewById(R.id.imageView);
+                final ImageView imageView2 = (ImageView)findViewById(R.id.imageView2);
+                final ImageButton imageButton1 = (ImageButton)findViewById(R.id.imageButton1);
+                final ImageButton imageButton2 = (ImageButton)findViewById(R.id.imageButton2);
+                final ImageButton imageButton3 = (ImageButton)findViewById(R.id.imageButton3);
+                final ImageButton imageButton4 = (ImageButton)findViewById(R.id.imageButton4);
+                final TextView StoryLineText = (TextView)findViewById(R.id.StoryLineText);
+                final ImageView storyFrame = (ImageView)findViewById(R.id.storyFrame);
+
+                try {
+                    pGif.setVisibility(View.GONE);
+                    imageView.setVisibility(View.VISIBLE);
+                    imageView2.setVisibility(View.VISIBLE);
+                    imageButton1.setVisibility(View.VISIBLE);
+                    imageButton2.setVisibility(View.VISIBLE);
+                    imageButton3.setVisibility(View.VISIBLE);
+                    imageButton4.setVisibility(View.VISIBLE);
+                    StoryLineText.setVisibility(View.VISIBLE);
+                    storyFrame.setVisibility(View.VISIBLE);
+                } catch (Exception e){
+
+                }
+
+            }
+            */
+
 //            Toast.makeText(MainActivity.this,Integer.toString(userpal_int), Toast.LENGTH_SHORT).show();
             Drawable myDrawable_pal = getDrawable(getResources().getIdentifier(newstoryarray[0][userpal_int], "drawable", "ca.utoronto.ece1778.tripstory"));
             Bitmap anImage_pal = ((BitmapDrawable) myDrawable_pal).getBitmap();
@@ -299,4 +334,16 @@ public class MainActivity extends Activity {
             startActivity(intent);
         }
     }
+
+    public void startVibrate(View v) {
+        long pattern[] = { 0, 100, 200, 300, 400 };
+        vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        vibrator.vibrate(pattern, 2);
+
+    }
+
+    public void stopVibrate(View v) {
+        vibrator.cancel();
+    }
+
 }
