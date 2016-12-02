@@ -345,6 +345,12 @@ public class Compile extends AppCompatActivity {
         File file_temp = new File(filename);
         Uri file = Uri.fromFile(file_temp);
 
+        // Once we have a filename, the filename is set as a shared preference and used throughout.
+        SharedPreferences sharedPref = this.getSharedPreferences("ca.utoronto.ece1778.tripstory", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString("filename_uri", filename);
+        editor.commit();
+
         // Create the file metadata
         StorageMetadata metadata = new StorageMetadata.Builder()
                 .setContentType("image/jpeg")

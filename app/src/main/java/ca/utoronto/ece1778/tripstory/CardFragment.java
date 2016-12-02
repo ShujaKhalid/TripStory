@@ -1,7 +1,9 @@
 package ca.utoronto.ece1778.tripstory;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.content.ContentResolver;
 import android.content.Intent;
@@ -14,6 +16,9 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,9 +27,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.File;
-import java.util.ArrayList;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.FileDownloadTask;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class CardFragment extends Fragment {
@@ -34,10 +46,14 @@ public class CardFragment extends Fragment {
     String Themes[] = {"Underwater Adventure", "Trip to the Zoo!"};
     String Images[] = {"scuba","zoo"};
     public ArrayList Stories;
+    FirebaseStorage storage = FirebaseStorage.getInstance();
+    StorageReference storageRef = storage.getReferenceFromUrl("gs://tripstory-47cf0.appspot.com");
+    public ArrayList<String> Datvalues = new ArrayList<String>();
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
         initializeList();
         getActivity().setTitle("Rebus Story Library");
     }
@@ -49,6 +65,7 @@ public class CardFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_card, container, false);
         MyRecyclerView = (RecyclerView) view.findViewById(R.id.cardView);
         MyRecyclerView.setHasFixedSize(true);
+        setHasOptionsMenu(true);
 
         LinearLayoutManager MyLayoutManager = new LinearLayoutManager(getActivity());
         MyLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
@@ -128,51 +145,137 @@ public class CardFragment extends Fragment {
             });
 
 
-        likeImageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+            likeImageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
 
 
-                int id = (int)likeImageView.getTag();
-                if( id == R.mipmap.ic_favorite_black_24dp){
+                    int id = (int)likeImageView.getTag();
+                    if( id == R.mipmap.ic_favorite_black_24dp){
 
-                    likeImageView.setTag(R.mipmap.ic_favorite_black_24dp);
-                    likeImageView.setImageResource(R.mipmap.ic_favorite_black_24dp);
+                        likeImageView.setTag(R.mipmap.ic_favorite_black_24dp);
+                        likeImageView.setImageResource(R.mipmap.ic_favorite_black_24dp);
 
-                    Toast.makeText(getActivity(),titleTextView.getText()+" added to favourites",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(),titleTextView.getText()+" added to favourites",Toast.LENGTH_SHORT).show();
 
-                }else{
+                    }else{
 
-                    likeImageView.setTag(R.mipmap.ic_favorite_black_24dp);
-                    likeImageView.setImageResource(R.mipmap.ic_favorite_black_24dp);
-                    Toast.makeText(getActivity(),titleTextView.getText()+" removed from favourites",Toast.LENGTH_SHORT).show();
+                        likeImageView.setTag(R.mipmap.ic_favorite_black_24dp);
+                        likeImageView.setImageResource(R.mipmap.ic_favorite_black_24dp);
+                        Toast.makeText(getActivity(),titleTextView.getText()+" removed from favourites",Toast.LENGTH_SHORT).show();
 
+
+                    }
 
                 }
+            });
 
-            }
-        });
+            shareImageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
 
-        shareImageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Uri imageUri = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE +
-                        "://" + getResources().getResourcePackageName(coverImageView.getId())
-                        + '/' + "drawable" + '/' + getResources().getResourceEntryName((int)coverImageView.getTag()));
-
+        /*
+                    Uri imageUri = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE +
+                            "://" + getResources().getResourcePackageName(coverImageView.getId())
+                            + '/' + "drawable" + '/' + getResources().getResourceEntryName((int)coverImageView.getTag()));
                 Intent shareIntent = new Intent();
                 shareIntent.setAction(Intent.ACTION_SEND);
                 shareIntent.putExtra(Intent.EXTRA_STREAM,imageUri);
                 shareIntent.setType("image/jpeg");
-                //startActivity(Intent.createChooser(shareIntent, getResources().getText(R.string.send_to)));
-                //startActivity(Intent.createChooser(shareIntent, getResources().getText(1)));
+        */
+                    SharedPreferences sharedPref = getActivity().getSharedPreferences("ca.utoronto.ece1778.tripstory" , getActivity().MODE_PRIVATE);
+                    String filename_uri = sharedPref.getString("filename_uri", "null");
+
+                    File file_temp = new File(filename_uri);
+                    Uri imageUri = Uri.fromFile(file_temp);
+
+                    System.out.println("imageUri = " + imageUri);
+                    System.out.println("file_temp = " + file_temp);
+                    System.out.println("imageUri.parse = " + Uri.parse(filename_uri));
+
+                    Intent shareIntent = new Intent();
+                    shareIntent.setAction(Intent.ACTION_SEND);
+                    shareIntent.putExtra(Intent.EXTRA_STREAM, imageUri);
+                    shareIntent.setType("image/jpeg");
+                    startActivity(Intent.createChooser(shareIntent, "Share images to.."));
+                    //startActivity(Intent.createChooser(shareIntent, getResources().getText(R.string.send_to)));
+                    //startActivity(Intent.createChooser(shareIntent, getResources().getText(1)));
+
+                }
+            });
+
+        }
+    }
+
+    public static String getFileNamenoExt(String fileName) {
+        return fileName.substring(fileName.lastIndexOf("/") + 1, fileName.indexOf("."));
+    }
+
+    protected void onRestore() {
+
+        for (int i = 0; i <= Datvalues.size() - 1; i++) {
+            List list = new ArrayList(Datvalues);
+            System.out.println("list almost there " + list.get(i).toString());
+            System.out.println("list size " + list.size());
+            StorageReference downloadTask = storageRef.child("images/" + list.get(i).toString());
+
+            System.out.println("%%%%%%%%%%%% URL = " + downloadTask.getDownloadUrl().toString());
+            System.out.println("%%%%%%%%%%%% Bucket = " + downloadTask.getBucket().length());
+
+            File storageDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM + "/Camera");
+            File localFile = null;
+
+            try {
+                localFile = File.createTempFile(getFileNamenoExt(list.get(i).toString()), ".jpg", storageDir);
+
+            } catch (IOException e) {
+                e.printStackTrace();
+
+                Toast.makeText(getContext(), "No Backup Images" ,
+                        Toast.LENGTH_LONG).show();
 
             }
-        });
 
+            downloadTask.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+
+                @Override
+                public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+                    Toast.makeText(getContext(), "Files Downloaded",
+                            Toast.LENGTH_LONG).show();
+
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception exception) {
+                    // Handle any errors
+
+                }
+            });
+
+        }
     }
-}
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getActivity().getMenuInflater().inflate(R.menu.menu_main, menu);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+
+        switch (item.getItemId()) {
+            case R.id.action_restore:
+                onRestore();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
     public void initializeList() {
         listitems.clear();
@@ -182,7 +285,7 @@ public class CardFragment extends Fragment {
         for(int i=0;i<Stories.size();i++){
             StoryModel item = new StoryModel();
             // It is going to be only underwater adventure for the time being ...
-            item.setCardName("Underwater Adventure " + i);
+            item.setCardName(" Underwater Adventure " + i);
             item.setImageResourceId(getResources().getIdentifier("scuba", "drawable", "ca.utoronto.ece1778.tripstory"));
 
             item.setIsfav(0);

@@ -4,6 +4,7 @@ package ca.utoronto.ece1778.tripstory;
  * Created by sssk9797 on 19/11/2016.
  */
 
+import android.content.SharedPreferences;
 import android.graphics.Paint;
 
 import android.content.Context;
@@ -12,7 +13,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.Paint;
+import android.content.SharedPreferences;
 import android.graphics.Paint.Style;
 import android.graphics.Path;
 import android.graphics.Rect;
@@ -108,6 +109,15 @@ public class PageCurlViewzzz extends View {
     /** LAGACY The current foreground */
     private Bitmap mForeground;
 
+    /** LAGACY The current foreground */
+    private Bitmap mBackground1;
+
+    /** LAGACY The current foreground */
+    private Bitmap mBackground2;
+
+    /** LAGACY The current foreground */
+    private Bitmap mBackground3;
+
     /** LAGACY The current background */
     private Bitmap mBackground;
 
@@ -116,6 +126,9 @@ public class PageCurlViewzzz extends View {
 
     /** LAGACY Current selected page */
     private int mIndex = 0;
+
+    /** Set the Recycler view variable here*/
+    public int choice;
 
 
 
@@ -233,30 +246,59 @@ public class PageCurlViewzzz extends View {
 
         mPages = new ArrayList<Bitmap>();
 
-        /* // ----- Commented out for spiral 4! ----- //
-        for(int image = 0; image < pages.size(); image++){
-            BitmapFactory.Options options = new BitmapFactory.Options();
-            options.inSampleSize = 8;
-            options.inJustDecodeBounds = false;
-            Bitmap result = BitmapFactory.decodeFile(pages.get(image).toString(), options);
-            mPages.add(result);
-        }
-        */
+        //for(int image = 0; image < pages.size(); image++){
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inSampleSize = 1;
+        options.inJustDecodeBounds = false;
+        Bitmap result = BitmapFactory.decodeFile(pages.get(choice).toString(), options);
+        Bitmap cover = BitmapFactory.decodeResource( getResources(), R.drawable.coverpage, options);
+        Bitmap created = BitmapFactory.decodeResource( getResources(), R.drawable.created, options);
+        Bitmap gloss1 = BitmapFactory.decodeResource( getResources(), R.drawable.gloss1, options);
+        Bitmap gloss2 = BitmapFactory.decodeResource( getResources(), R.drawable.gloss2, options);
+        Bitmap gloss3 = BitmapFactory.decodeResource( getResources(), R.drawable.gloss3, options);
+        // Get image of personalized user as a bitmap
+        SharedPreferences sharedPref = getContext().getSharedPreferences("ca.utoronto.ece1778.tripstory" , getContext().MODE_PRIVATE);
+        String personUser = sharedPref.getString("personaluser", "null");
+        BitmapFactory.Options options1 = new BitmapFactory.Options();
+        options.inSampleSize = 8;
+        Bitmap author = BitmapFactory.decodeFile(personUser, options1);
+        Bitmap Orientedauthor = ExifUtil.rotateBitmap(personUser, author);
+        // Crop 1
+        int yourwidth0 = result.getWidth();
+        int yourheight0 = result.getHeight()/2;
+        Bitmap resizedbitmap1=Bitmap.createBitmap(result, 0, 0, yourwidth0, yourheight0);
+        // Crop 2
+        int yourwidth1 = result.getWidth();
+        int yourheight1 = result.getHeight()/2;
+        Bitmap resizedbitmap2=Bitmap.createBitmap(result, 0, yourheight0, yourwidth1, yourheight1);
+        // Crop 3
+        int yourwidth2 = result.getWidth();
+        int yourheight2 = result.getHeight()/2;
+        Bitmap resizedbitmap3=Bitmap.createBitmap(result, 0, yourheight1, yourwidth2, yourheight2);
 
-
-        for(int image = 0; image < 1; image++){
-            BitmapFactory.Options options = new BitmapFactory.Options();
-            options.inSampleSize = 8;
-            options.inJustDecodeBounds = false;
-            Bitmap result = BitmapFactory.decodeFile(pages.get(image).toString(), options);
-            mPages.add(result);
-        }
+        // Add cover page here
+        mPages.add(cover);
+        // Add the author's first page here
+        mPages.add(created);
+        // Add the author's second page here
+        mPages.add(Orientedauthor);
+        // Begin adding the pages here
+        mPages.add(resizedbitmap1);
+        mPages.add(resizedbitmap2);
+        mPages.add(gloss1);
+        mPages.add(gloss2);
+        mPages.add(gloss3);
+        //}
 
         // Create some sample images
-        //commented out - sk///mForeground = mPages.get(0);
-        mForeground = mPages.get(mPages.size()-1);
-        //commented out - sk///*mBackground = mPages.get(1); */
+        mForeground = mPages.get(0);
+        mBackground = mPages.get(1);
 
+    }
+
+    // Set the variable choice as a global variable
+    public int setChoice(int choice) {
+        return choice;
     }
 
     /**
@@ -851,13 +893,14 @@ public class PageCurlViewzzz extends View {
 
     /**
      * Swap between the fore and back-ground.
-     */
+
     @Deprecated
     private void SwapViews() {
         Bitmap temp = mForeground;
         mForeground = mBackground;
         mBackground = temp;
     }
+    */
 
     /**
      * Swap to next view
@@ -895,7 +938,7 @@ public class PageCurlViewzzz extends View {
      */
     private void setViews(int foreground, int background) {
         mForeground = mPages.get(foreground);
-        //commented out - sk///mBackground = mPages.get(background);
+        mBackground = mPages.get(background);
     }
 
     //---------------------------------------------------------------
@@ -938,8 +981,8 @@ public class PageCurlViewzzz extends View {
 
         // Draw our elements
         drawForeground(canvas, rect, paint);
-        //commented out - sk///drawBackground(canvas, rect, paint);
-        //commented out - sk///drawCurlEdge(canvas);
+        drawBackground(canvas, rect, paint);
+        drawCurlEdge(canvas);
 
         // Draw any debug info once we are done
         if ( bEnableDebugMode )
@@ -965,7 +1008,7 @@ public class PageCurlViewzzz extends View {
         mFlipRadius = getWidth();
 
         ResetClipEdge();
-        //commented out - sk///DoPageCurl();
+        DoPageCurl();
     }
 
     /**
