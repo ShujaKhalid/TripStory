@@ -3,19 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="650dp"
     tools:context="ca.utoronto.ece1778.tripstory.AnimationActivity">
 
 
     <FrameLayout
         android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="400dp"
+        android:layout_height="650dp"
+        >
 
         <ca.utoronto.ece1778.tripstory.PlayGifView
             android:id="@+id/viewGif"
             android:layout_width="400dp"
-            android:layout_height="600dp"
+            android:layout_height="650dp"
             android:layout_gravity="center"
             android:scaleType="fitXY"
             />

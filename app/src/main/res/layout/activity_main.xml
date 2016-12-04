@@ -22,16 +22,15 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="110dp"
             android:background="#33FFFFFF"
             android:paddingLeft="125dp"
-            >
+            android:paddingTop="10dp">
 
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:id="@+id/imageView" />
-
 
             <ImageView
                 android:layout_width="80dp"
@@ -137,5 +136,18 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:id="@+id/progressBar" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar2"
+        android:layout_gravity="right|top" />
 
 </FrameLayout>
