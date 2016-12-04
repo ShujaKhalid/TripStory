@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
@@ -180,104 +181,122 @@ public class Compile extends AppCompatActivity {
 //        Bundle b=this.getIntent().getExtras();
 //        String[] array=b.getStringArray(key);
 
-        Drawable myDrawable1 = getDrawable(getResources().getIdentifier(currstory[0][buddy],"drawable","ca.utoronto.ece1778.tripstory"));
-        Bitmap anImage1      = ((BitmapDrawable) myDrawable1).getBitmap();
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inSampleSize = 4;
+        options.inJustDecodeBounds = false;
+
+        int myDrawable1 = (getResources().getIdentifier(currstory[0][buddy],"drawable","ca.utoronto.ece1778.tripstory"));
+        Bitmap anImage1 = (BitmapFactory.decodeResource( getResources(), myDrawable1, options));
         text1.setText(currstory[0][6]);
         pic1.setImageBitmap(anImage1);
         text2.setText(currstory[0][7]);
 
-        Drawable myDrawable2 = getDrawable(getResources().getIdentifier(currstory[1][arrayB[2]+2],"drawable","ca.utoronto.ece1778.tripstory"));
-        Bitmap anImage2      = ((BitmapDrawable) myDrawable2).getBitmap();
+        int myDrawable2 = (getResources().getIdentifier(currstory[1][arrayB[2]+2],"drawable","ca.utoronto.ece1778.tripstory"));
+        Bitmap anImage2 = BitmapFactory.decodeResource( getResources(), myDrawable2, options);
         text1_2.setText(currstory[1][6]);
         pic2.setImageBitmap(anImage2);
         text2_2.setText(currstory[1][7]);
 
-        Drawable myDrawable3 = getDrawable(getResources().getIdentifier(currstory[2][arrayB[3]+2],"drawable","ca.utoronto.ece1778.tripstory"));
-        Bitmap anImage3      = ((BitmapDrawable) myDrawable3).getBitmap();
+        int myDrawable3 = (getResources().getIdentifier(currstory[2][arrayB[3]+2],"drawable","ca.utoronto.ece1778.tripstory"));
+        Bitmap anImage3 = BitmapFactory.decodeResource( getResources(), myDrawable3, options);
         text1_3.setText(currstory[2][6]);
         pic3.setImageBitmap(anImage3);
         text2_3.setText(currstory[2][7]);
         text3_3.setText(currstory[2][8]);
 
-        Drawable myDrawable4 = getDrawable(getResources().getIdentifier(currstory[3][arrayB[4]+2],"drawable","ca.utoronto.ece1778.tripstory"));
-        Bitmap anImage4      = ((BitmapDrawable) myDrawable4).getBitmap();
+        int myDrawable4 = (getResources().getIdentifier(currstory[3][arrayB[4]+2],"drawable","ca.utoronto.ece1778.tripstory"));
+        Bitmap anImage4 = BitmapFactory.decodeResource( getResources(), myDrawable4, options);
         text1_4.setText(currstory[3][6]);
         pic4.setImageBitmap(anImage4);
         text2_4.setText(currstory[3][7]);
 
-        Drawable myDrawable5 = getDrawable(getResources().getIdentifier(currstory[4][arrayB[5]+2], "drawable", "ca.utoronto.ece1778.tripstory"));
-        Bitmap anImage5 = ((BitmapDrawable) myDrawable5).getBitmap();
+        int myDrawable5 = (getResources().getIdentifier(currstory[4][arrayB[5]+2], "drawable", "ca.utoronto.ece1778.tripstory"));
+        Bitmap anImage5 = BitmapFactory.decodeResource( getResources(), myDrawable5, options);
         text1_5.setText(currstory[4][6]);
         pic5.setImageBitmap(anImage5);
         text2_5.setText(currstory[4][7]);
 
-
-        Drawable myDrawable6 = getDrawable(getResources().getIdentifier(currstory[5][arrayB[6]+2], "drawable", "ca.utoronto.ece1778.tripstory"));
-        Bitmap anImage6 = ((BitmapDrawable) myDrawable6).getBitmap();
+        int myDrawable6 = (getResources().getIdentifier(currstory[5][arrayB[6]+2], "drawable", "ca.utoronto.ece1778.tripstory"));
+        Bitmap anImage6 = BitmapFactory.decodeResource( getResources(), myDrawable6, options);
         text1_6.setText(currstory[5][6]);
         pic6.setImageBitmap(anImage6);
         text2_6.setText(currstory[5][7]);
         text3_6.setText(currstory[5][8]);
 
-        Drawable myDrawable7 = getDrawable(getResources().getIdentifier(currstory[6][arrayB[7]+2], "drawable", "ca.utoronto.ece1778.tripstory"));
-        Bitmap anImage7 = ((BitmapDrawable) myDrawable7).getBitmap();
+        int myDrawable7 = (getResources().getIdentifier(currstory[6][arrayB[7]+2], "drawable", "ca.utoronto.ece1778.tripstory"));
+        Bitmap anImage7 = BitmapFactory.decodeResource( getResources(), myDrawable7, options);
         text1_7.setText(currstory[6][6]);
         pic7.setImageBitmap(anImage7);
         text2_7.setText(currstory[6][7]);
         text3_7.setText(currstory[6][8]);
 
-        Drawable myDrawable8 = getDrawable(getResources().getIdentifier(currstory[7][arrayB[8]+2], "drawable", "ca.utoronto.ece1778.tripstory"));
-        Bitmap anImage8 = ((BitmapDrawable) myDrawable8).getBitmap();
+        int myDrawable8 = (getResources().getIdentifier(currstory[7][arrayB[8]+2], "drawable", "ca.utoronto.ece1778.tripstory"));
+        Bitmap anImage8 = BitmapFactory.decodeResource( getResources(), myDrawable8, options);
         text1_8.setText(currstory[7][6]);
         pic8.setImageBitmap(anImage8);
         text2_8.setText(currstory[7][7]);
 
-        Drawable myDrawable9 = getDrawable(getResources().getIdentifier(currstory[8][arrayB[9]+2], "drawable", "ca.utoronto.ece1778.tripstory"));
-        Bitmap anImage9 = ((BitmapDrawable) myDrawable9).getBitmap();
+        int myDrawable9 = (getResources().getIdentifier(currstory[8][arrayB[9]+2], "drawable", "ca.utoronto.ece1778.tripstory"));
+        Bitmap anImage9 = BitmapFactory.decodeResource( getResources(), myDrawable9, options);
         text1_9.setText(currstory[8][6]);
         pic9.setImageBitmap(anImage9);
         text2_9.setText(currstory[8][7]);
 
-        Drawable myDrawable10 = getDrawable(getResources().getIdentifier(currstory[9][arrayB[10]+2], "drawable", "ca.utoronto.ece1778.tripstory"));
-        Bitmap anImage10 = ((BitmapDrawable) myDrawable10).getBitmap();
+        int myDrawable10 = (getResources().getIdentifier(currstory[9][arrayB[10]+2], "drawable", "ca.utoronto.ece1778.tripstory"));
+        Bitmap anImage10 = BitmapFactory.decodeResource( getResources(), myDrawable10, options);
         text1_10.setText(currstory[9][6]);
         pic10.setImageBitmap(anImage10);
         text2_10.setText(currstory[9][7]);
 
-
-        Drawable myDrawable11 = getDrawable(getResources().getIdentifier(currstory[10][arrayB[11]+2], "drawable", "ca.utoronto.ece1778.tripstory"));
-        Bitmap anImage11 = ((BitmapDrawable) myDrawable11).getBitmap();
+        int myDrawable11 = (getResources().getIdentifier(currstory[10][arrayB[11]+2], "drawable", "ca.utoronto.ece1778.tripstory"));
+        Bitmap anImage11 = BitmapFactory.decodeResource( getResources(), myDrawable11, options);
         text1_11.setText(currstory[10][6]);
         pic11.setImageBitmap(anImage11);
         text2_11.setText(currstory[10][7]);
 
-        Drawable myDrawable12 = getDrawable(getResources().getIdentifier(currstory[11][arrayB[12]+2], "drawable", "ca.utoronto.ece1778.tripstory"));
-        Bitmap anImage12 = ((BitmapDrawable) myDrawable12).getBitmap();
+        int myDrawable12 = (getResources().getIdentifier(currstory[11][arrayB[12]+2], "drawable", "ca.utoronto.ece1778.tripstory"));
+        Bitmap anImage12 = BitmapFactory.decodeResource( getResources(), myDrawable12, options);
         text1_12.setText(currstory[11][6]);
         pic12.setImageBitmap(anImage12);
         text2_12.setText(currstory[11][7]);
         text3_12.setText(currstory[11][8]);
 
-        Drawable myDrawable13 = getDrawable(getResources().getIdentifier(currstory[12][arrayB[13]+2], "drawable", "ca.utoronto.ece1778.tripstory"));
-        Bitmap anImage13 = ((BitmapDrawable) myDrawable13).getBitmap();
+        int myDrawable13 = (getResources().getIdentifier(currstory[12][arrayB[13]+2], "drawable", "ca.utoronto.ece1778.tripstory"));
+        Bitmap anImage13 = BitmapFactory.decodeResource( getResources(), myDrawable13, options);
         text1_13.setText(currstory[12][6]);
         pic13.setImageBitmap(anImage13);
         text2_13.setText(currstory[12][7]);
 
-        Drawable myDrawable14 = getDrawable(getResources().getIdentifier(currstory[13][arrayB[14]+2], "drawable", "ca.utoronto.ece1778.tripstory"));
-        Bitmap anImage14 = ((BitmapDrawable) myDrawable14).getBitmap();
+        int myDrawable14 = (getResources().getIdentifier(currstory[13][arrayB[14]+2], "drawable", "ca.utoronto.ece1778.tripstory"));
+        Bitmap anImage14 = BitmapFactory.decodeResource( getResources(), myDrawable14, options);
         text1_14.setText(currstory[13][6]);
         pic14.setImageBitmap(anImage14);
         text2_14.setText(currstory[13][7]);
 
-        Drawable myDrawable15 = getDrawable(getResources().getIdentifier(currstory[14][arrayB[15]+2], "drawable", "ca.utoronto.ece1778.tripstory"));
-        Bitmap anImage15 = ((BitmapDrawable) myDrawable15).getBitmap();
+
+        int myDrawable15 = (getResources().getIdentifier(currstory[14][arrayB[15]+2], "drawable", "ca.utoronto.ece1778.tripstory"));
+        Bitmap anImage15 = BitmapFactory.decodeResource( getResources(), myDrawable15, options);
         text1_15.setText(currstory[14][6]);
         pic15.setImageBitmap(anImage15);
         text2_15.setText(currstory[14][7]);
 
-
-
+        /*
+        anImage1.recycle();
+        anImage2.recycle();
+        anImage3.recycle();
+        anImage4.recycle();
+        anImage5.recycle();
+        anImage6.recycle();
+        anImage7.recycle();
+        anImage8.recycle();
+        anImage9.recycle();
+        anImage10.recycle();
+        anImage11.recycle();
+        anImage12.recycle();
+        anImage13.recycle();
+        anImage14.recycle();
+        anImage15.recycle();
+        */
 
 
 

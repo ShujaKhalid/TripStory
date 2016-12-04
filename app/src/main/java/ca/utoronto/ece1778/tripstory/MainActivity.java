@@ -19,6 +19,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
@@ -198,6 +199,14 @@ public class MainActivity extends Activity {
 //
 //        Toast.makeText(MainActivity.this, Integer.toString(userpal_int), Toast.LENGTH_SHORT).show();
 
+        if (currentfame == 1) {
+
+            Intent intent = new Intent(MainActivity.this, AnimationActivity.class);
+            intent.putExtra("frame", "intro");
+            //Start theme selector activity
+            startActivity(intent);
+        }
+
         Drawable myDrawable_pal = getDrawable(getResources().getIdentifier(newstoryarray[0][userpal_int], "drawable", "ca.utoronto.ece1778.tripstory"));
         Bitmap anImage_pal = ((BitmapDrawable) myDrawable_pal).getBitmap();
         img_view2.setImageBitmap(anImage_pal);
@@ -234,71 +243,25 @@ public class MainActivity extends Activity {
     {
         if (currentfame<newstoryarray.length-1){
 
-
-
             if (currentfame == 3) {
 
                 Intent intent = new Intent(MainActivity.this, AnimationActivity.class);
-
+                intent.putExtra("frame", "shark");
                 //Start theme selector activity
                 startActivity(intent);
 
             } else {
-                    // Do nothing
+                // Do nothing
             }
 
-            System.out.println("Playing Videos!");
 
-            /*
-            if (currentfame == 4) {
 
-                final ImageView imageView = (ImageView)findViewById(R.id.imageView);
-                imageView.setVisibility(View.GONE);
-                final ImageView imageView2 = (ImageView)findViewById(R.id.imageView2);
-                imageView2.setVisibility(View.GONE);
-                final ImageButton imageButton1 = (ImageButton)findViewById(R.id.imageButton1);
-                imageButton1.setVisibility(View.GONE);
-                final ImageButton imageButton2 = (ImageButton)findViewById(R.id.imageButton2);
-                imageButton2.setVisibility(View.GONE);
-                final ImageButton imageButton3 = (ImageButton)findViewById(R.id.imageButton3);
-                imageButton3.setVisibility(View.GONE);
-                final ImageButton imageButton4 = (ImageButton)findViewById(R.id.imageButton4);
-                imageButton4.setVisibility(View.GONE);
-                final TextView StoryLineText = (TextView)findViewById(R.id.StoryLineText);
-                StoryLineText.setVisibility(View.GONE);
-                final ImageView storyFrame = (ImageView)findViewById(R.id.storyFrame);
-                storyFrame.setVisibility(View.GONE);
-                PlayGifView pGif = (PlayGifView) findViewById(R.id.viewGif);
-                pGif.setImageResource(R.raw.bubbles);
+            ProgressBar progBar = (ProgressBar) findViewById(R.id.progressBar);
+            progBar.setProgress(currentfame);
+            progBar.setMax(15);
 
-            } else {
 
-                PlayGifView pGif = (PlayGifView) findViewById(R.id.viewGif);
-                final ImageView imageView = (ImageView)findViewById(R.id.imageView);
-                final ImageView imageView2 = (ImageView)findViewById(R.id.imageView2);
-                final ImageButton imageButton1 = (ImageButton)findViewById(R.id.imageButton1);
-                final ImageButton imageButton2 = (ImageButton)findViewById(R.id.imageButton2);
-                final ImageButton imageButton3 = (ImageButton)findViewById(R.id.imageButton3);
-                final ImageButton imageButton4 = (ImageButton)findViewById(R.id.imageButton4);
-                final TextView StoryLineText = (TextView)findViewById(R.id.StoryLineText);
-                final ImageView storyFrame = (ImageView)findViewById(R.id.storyFrame);
-
-                try {
-                    pGif.setVisibility(View.GONE);
-                    imageView.setVisibility(View.VISIBLE);
-                    imageView2.setVisibility(View.VISIBLE);
-                    imageButton1.setVisibility(View.VISIBLE);
-                    imageButton2.setVisibility(View.VISIBLE);
-                    imageButton3.setVisibility(View.VISIBLE);
-                    imageButton4.setVisibility(View.VISIBLE);
-                    StoryLineText.setVisibility(View.VISIBLE);
-                    storyFrame.setVisibility(View.VISIBLE);
-                } catch (Exception e){
-
-                }
-
-            }
-            */
+            System.out.println("Playing Video!");
 
 //            Toast.makeText(MainActivity.this,Integer.toString(userpal_int), Toast.LENGTH_SHORT).show();
             Drawable myDrawable_pal = getDrawable(getResources().getIdentifier(newstoryarray[0][userpal_int], "drawable", "ca.utoronto.ece1778.tripstory"));
@@ -306,27 +269,32 @@ public class MainActivity extends Activity {
             img_view2.setImageBitmap(anImage_pal);
 
             // Set the user's image!
-            img_view.setImageBitmap(userimage);
+            img_view.setImageBitmap(userimage2);
 
             currentfame+=1;
-            Drawable myDrawable1 = getDrawable(getResources().getIdentifier(newstoryarray[currentfame][2],"drawable","ca.utoronto.ece1778.tripstory"));
-            Bitmap anImage1      = ((BitmapDrawable) myDrawable1).getBitmap();
+
+            BitmapFactory.Options options = new BitmapFactory.Options();
+            options.inSampleSize = 4;
+            options.inJustDecodeBounds = false;
+
+            int myDrawable1 = (getResources().getIdentifier(newstoryarray[currentfame][2],"drawable","ca.utoronto.ece1778.tripstory"));
+            Bitmap anImage1      = BitmapFactory.decodeResource( getResources(), myDrawable1, options);
             img_b1.setImageBitmap(anImage1);
 
-            Drawable myDrawable2 = getDrawable(getResources().getIdentifier(newstoryarray[currentfame][3],"drawable","ca.utoronto.ece1778.tripstory"));
-            Bitmap anImage2      = ((BitmapDrawable) myDrawable2).getBitmap();
+            int myDrawable2 = (getResources().getIdentifier(newstoryarray[currentfame][3],"drawable","ca.utoronto.ece1778.tripstory"));
+            Bitmap anImage2      = BitmapFactory.decodeResource( getResources(), myDrawable2, options);
             img_b2.setImageBitmap(anImage2);
 
-            Drawable myDrawable3 = getDrawable(getResources().getIdentifier(newstoryarray[currentfame][4],"drawable","ca.utoronto.ece1778.tripstory"));
-            Bitmap anImage3      = ((BitmapDrawable) myDrawable3).getBitmap();
+            int myDrawable3 = (getResources().getIdentifier(newstoryarray[currentfame][4],"drawable","ca.utoronto.ece1778.tripstory"));
+            Bitmap anImage3      = BitmapFactory.decodeResource( getResources(), myDrawable3, options);
             img_b3.setImageBitmap(anImage3);
 
-            Drawable myDrawable4 = getDrawable(getResources().getIdentifier(newstoryarray[currentfame][5],"drawable","ca.utoronto.ece1778.tripstory"));
-            Bitmap anImage4      = ((BitmapDrawable) myDrawable4).getBitmap();
+            int myDrawable4 = (getResources().getIdentifier(newstoryarray[currentfame][5],"drawable","ca.utoronto.ece1778.tripstory"));
+            Bitmap anImage4      = BitmapFactory.decodeResource( getResources(), myDrawable4, options);
             img_b4.setImageBitmap(anImage4);
 
-            Drawable FrameImg = getDrawable(getResources().getIdentifier(newstoryarray[currentfame][0],"drawable","ca.utoronto.ece1778.tripstory"));
-            Bitmap frameImg      = ((BitmapDrawable) FrameImg).getBitmap();
+            int FrameImg = getResources().getIdentifier(newstoryarray[currentfame][0],"drawable","ca.utoronto.ece1778.tripstory");
+            Bitmap frameImg = BitmapFactory.decodeResource( getResources(), FrameImg, options);
             srory_frame.setImageBitmap(frameImg);
 
             StorylineText.setText(newstoryarray[currentfame][1]);

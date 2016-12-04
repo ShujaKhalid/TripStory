@@ -248,9 +248,9 @@ public class PageCurlViewzzz extends View {
 
         //for(int image = 0; image < pages.size(); image++){
         BitmapFactory.Options options = new BitmapFactory.Options();
-        options.inSampleSize = 1;
+        options.inSampleSize = 2;
         options.inJustDecodeBounds = false;
-        Bitmap result = BitmapFactory.decodeFile(pages.get(choice).toString(), options);
+        Bitmap result = BitmapFactory.decodeFile(pages.get(pages.size()-choice-1).toString(), options);
         Bitmap cover = BitmapFactory.decodeResource( getResources(), R.drawable.coverpage, options);
         Bitmap created = BitmapFactory.decodeResource( getResources(), R.drawable.created, options);
         Bitmap gloss1 = BitmapFactory.decodeResource( getResources(), R.drawable.gloss1, options);
@@ -263,18 +263,25 @@ public class PageCurlViewzzz extends View {
         options.inSampleSize = 8;
         Bitmap author = BitmapFactory.decodeFile(personUser, options1);
         Bitmap Orientedauthor = ExifUtil.rotateBitmap(personUser, author);
+
+        System.out.println(pages.get(choice).toString());
+        System.out.println(result.getHeight());
+
         // Crop 1
         int yourwidth0 = result.getWidth();
-        int yourheight0 = result.getHeight()/2;
+        int yourheight0 = (result.getHeight()*(1))/3;
+        System.out.println(yourheight0);
         Bitmap resizedbitmap1=Bitmap.createBitmap(result, 0, 0, yourwidth0, yourheight0);
         // Crop 2
         int yourwidth1 = result.getWidth();
-        int yourheight1 = result.getHeight()/2;
-        Bitmap resizedbitmap2=Bitmap.createBitmap(result, 0, yourheight0, yourwidth1, yourheight1);
+        int yourheight1 = (result.getHeight()*(1))/3 + yourheight0;
+        System.out.println(yourheight1);
+        Bitmap resizedbitmap2=Bitmap.createBitmap(result, 0, yourheight0, yourwidth1, yourheight0);
         // Crop 3
         int yourwidth2 = result.getWidth();
-        int yourheight2 = result.getHeight()/2;
-        Bitmap resizedbitmap3=Bitmap.createBitmap(result, 0, yourheight1, yourwidth2, yourheight2);
+        int yourheight2 = (result.getHeight()*(1))/3 + yourheight0*2;
+        System.out.println(yourheight2);
+        Bitmap resizedbitmap3=Bitmap.createBitmap(result, 0, yourheight1, yourwidth2, yourheight0);
 
         // Add cover page here
         mPages.add(cover);
@@ -285,6 +292,7 @@ public class PageCurlViewzzz extends View {
         // Begin adding the pages here
         mPages.add(resizedbitmap1);
         mPages.add(resizedbitmap2);
+        mPages.add(resizedbitmap3);
         mPages.add(gloss1);
         mPages.add(gloss2);
         mPages.add(gloss3);
