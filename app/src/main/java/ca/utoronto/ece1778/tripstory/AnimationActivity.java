@@ -25,7 +25,7 @@ public class AnimationActivity extends Activity {
         if ( currentframe.equals("shark") ) {
 
             final PlayGifView gifView = (PlayGifView) findViewById(R.id.viewGif);
-            gifView.setImageResource(R.raw.sharky);
+            gifView.setImageResource(R.raw.sharky3);
             Animation fadein = new AlphaAnimation(0.f, 1.f);
             Animation fadeout = new AlphaAnimation(1.f, 0.f);
             gifView.setVisibility(View.VISIBLE);
@@ -44,7 +44,7 @@ public class AnimationActivity extends Activity {
                     gifView.setVisibility(View.GONE);
                     finish();
                 }
-            }, 10000);
+            }, 4000);
 
         } else if ( currentframe.equals("intro") ) {
 

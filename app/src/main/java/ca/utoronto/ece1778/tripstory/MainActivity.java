@@ -80,7 +80,7 @@ public class MainActivity extends Activity {
         String personUser = sharedPref.getString("personaluser", "null");
         //System.out.println(" personaluser = " + personUser); // If this yields null, the string wasn't accessed properly from shared preferences
         BitmapFactory.Options options = new BitmapFactory.Options();
-        options.inSampleSize = 8;
+        options.inSampleSize = 2;
         options.inJustDecodeBounds = false;
         Bitmap result = BitmapFactory.decodeFile(personUser, options);
         Bitmap orientedBitmap = ExifUtil.rotateBitmap(personUser, result);
@@ -274,7 +274,7 @@ public class MainActivity extends Activity {
             currentfame+=1;
 
             BitmapFactory.Options options = new BitmapFactory.Options();
-            options.inSampleSize = 4;
+            options.inSampleSize = 2;
             options.inJustDecodeBounds = false;
 
             int myDrawable1 = (getResources().getIdentifier(newstoryarray[currentfame][2],"drawable","ca.utoronto.ece1778.tripstory"));
