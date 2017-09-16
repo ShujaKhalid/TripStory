@@ -1598,15 +1598,15 @@ mso-fareast-language:EN-IN'><o:p>&nbsp;</o:p></span></p>
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
 justify;line-height:normal'><b><span lang=EN-IN style='font-size:12.0pt;
 font-family:"Arial",sans-serif;mso-fareast-font-family:"Times New Roman";
-color:black;mso-fareast-language:EN-IN'><span style='mso-tab-count:5'>                                                     </span><span
+color:black;mso-fareast-language:EN-IN'><span style='mso-tab-count:5'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span><span
 style='background:yellow'><o:p></o:p></span></span></b></p>
 
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
 justify;line-height:normal'><b><span lang=EN-IN style='font-size:12.0pt;
 font-family:"Arial",sans-serif;mso-fareast-font-family:"Times New Roman";
 color:black;background:yellow;mso-fareast-language:EN-IN'><span
-style='mso-spacerun:yes'>                       </span><span
-style='mso-spacerun:yes'>                           </span></span></b><span
+style='mso-spacerun:yes'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span><span
+style='mso-spacerun:yes'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â </span></span></b><span
 lang=EN-IN style='font-size:12.0pt;font-family:"Times New Roman",serif;
 mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-IN'><o:p></o:p></span></p>
 
@@ -1726,12 +1726,12 @@ style='mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:Arial;
 color:black;mso-fareast-language:EN-IN;text-decoration:none;text-underline:
 none'>1. Introduction (Specialist Context</span></b></a></span><b><span
 lang=EN-IN style='mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
-Arial;color:black;mso-fareast-language:EN-IN'>)<span style='mso-tab-count:1'>        </span><span
-style='mso-spacerun:yes'>                                                 
-</span><span style='mso-spacerun:yes'>                 </span><span
-style='mso-spacerun:yes'>           </span><span
-style='mso-spacerun:yes'>          </span><span
-style='mso-spacerun:yes'>  </span>3</span></b><span lang=EN-IN><a
+Arial;color:black;mso-fareast-language:EN-IN'>)<span style='mso-tab-count:1'>Â Â Â Â Â Â Â  </span><span
+style='mso-spacerun:yes'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â 
+</span><span style='mso-spacerun:yes'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â </span><span
+style='mso-spacerun:yes'>Â Â Â Â Â Â Â Â Â Â Â </span><span
+style='mso-spacerun:yes'>Â Â Â Â Â Â Â Â Â Â </span><span
+style='mso-spacerun:yes'>Â Â </span>3</span></b><span lang=EN-IN><a
 href="https://docs.google.com/document/d/18odhABfSi3qdBrJreyhvC2E-ix_X83z6QeGYK8DGKBY/edit#heading=h.93sccxjky633"></a></span><b
 style='mso-bidi-font-weight:normal'><span lang=EN-IN style='mso-fareast-font-family:
 "Times New Roman";mso-bidi-font-family:"Times New Roman";mso-fareast-language:
@@ -1743,11 +1743,11 @@ href="https://docs.google.com/document/d/18odhABfSi3qdBrJreyhvC2E-ix_X83z6QeGYK8
 style='mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:Arial;
 color:black;mso-fareast-language:EN-IN;text-decoration:none;text-underline:
 none'>2. Statement of Functionality &amp; Screenshots<span style='mso-tab-count:
-1'>      </span><span style='mso-spacerun:yes'>                   </span><span
-style='mso-spacerun:yes'>                   </span><span
-style='mso-spacerun:yes'>                 </span><span
-style='mso-spacerun:yes'>            </span><span
-style='mso-spacerun:yes'>        </span><span style='mso-spacerun:yes'> </span></span></b></a></span><b
+1'>Â Â Â Â Â  </span><span style='mso-spacerun:yes'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span><span
+style='mso-spacerun:yes'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â </span><span
+style='mso-spacerun:yes'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â </span><span
+style='mso-spacerun:yes'>Â Â Â Â Â Â Â Â Â Â Â Â </span><span
+style='mso-spacerun:yes'>Â Â Â Â Â Â Â Â </span><span style='mso-spacerun:yes'>Â </span></span></b></a></span><b
 style='mso-bidi-font-weight:normal'><span lang=EN-IN style='mso-fareast-font-family:
 "Times New Roman";mso-bidi-font-family:Arial;mso-fareast-language:EN-IN'>3<o:p></o:p></span></b></p>
 
@@ -1759,10 +1759,10 @@ color:black;mso-fareast-language:EN-IN;text-decoration:none;text-underline:
 none'>3. Overall Design</span></b></a></span><b><span lang=EN-IN
 style='mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:Arial;
 color:black;mso-fareast-language:EN-IN'> (Block Diagram)<span
-style='mso-spacerun:yes'>                                                          
-</span><span style='mso-spacerun:yes'>                  </span><span
-style='mso-spacerun:yes'>       </span><span style='mso-tab-count:1'>              </span><span
-style='mso-spacerun:yes'>   </span>12</span></b><span lang=EN-IN><a
+style='mso-spacerun:yes'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â 
+</span><span style='mso-spacerun:yes'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â </span><span
+style='mso-spacerun:yes'>Â Â Â Â Â Â Â </span><span style='mso-tab-count:1'>Â Â Â Â Â Â Â Â Â Â Â Â Â  </span><span
+style='mso-spacerun:yes'>Â Â Â </span>12</span></b><span lang=EN-IN><a
 href="https://docs.google.com/document/d/18odhABfSi3qdBrJreyhvC2E-ix_X83z6QeGYK8DGKBY/edit#heading=h.sdxy7urksgb"></a></span><b
 style='mso-bidi-font-weight:normal'><span lang=EN-IN style='mso-fareast-font-family:
 "Times New Roman";mso-bidi-font-family:Arial;mso-fareast-language:EN-IN'><o:p></o:p></span></b></p>
@@ -1772,11 +1772,11 @@ style='mso-bidi-font-weight:normal'><span lang=EN-IN style='mso-fareast-font-fam
 href="https://docs.google.com/document/d/18odhABfSi3qdBrJreyhvC2E-ix_X83z6QeGYK8DGKBY/edit#heading=h.8cxbi94us6xg"><b><span
 style='mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:Arial;
 color:black;mso-fareast-language:EN-IN;text-decoration:none;text-underline:
-none'>4. Reflection<span style='mso-tab-count:1'>      </span><span
-style='mso-spacerun:yes'>                                                                                                          
-</span><span style='mso-spacerun:yes'>        </span><span
-style='mso-spacerun:yes'>                </span><span
-style='mso-spacerun:yes'>  </span></span></b></a></span><b style='mso-bidi-font-weight:
+none'>4. Reflection<span style='mso-tab-count:1'>Â Â Â Â Â  </span><span
+style='mso-spacerun:yes'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â 
+</span><span style='mso-spacerun:yes'>Â Â Â Â Â Â Â Â </span><span
+style='mso-spacerun:yes'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â </span><span
+style='mso-spacerun:yes'>Â Â </span></span></b></a></span><b style='mso-bidi-font-weight:
 normal'><span lang=EN-IN style='mso-fareast-font-family:"Times New Roman";
 mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-IN'>13<o:p></o:p></span></b></p>
 
@@ -1785,11 +1785,11 @@ mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-IN'>13<o:p></o:p>
 href="https://docs.google.com/document/d/18odhABfSi3qdBrJreyhvC2E-ix_X83z6QeGYK8DGKBY/edit#heading=h.uz64psuddbx3"><b><span
 style='mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:Arial;
 color:black;mso-fareast-language:EN-IN;text-decoration:none;text-underline:
-none'>5. Individual Contribution<span style='mso-tab-count:1'>          </span><span
-style='mso-spacerun:yes'>                                                                              
-</span><span style='mso-spacerun:yes'>   </span><span
-style='mso-spacerun:yes'>                  </span><span
-style='mso-spacerun:yes'>    </span></span></b></a></span><b style='mso-bidi-font-weight:
+none'>5. Individual Contribution<span style='mso-tab-count:1'>Â Â Â Â Â Â Â Â Â  </span><span
+style='mso-spacerun:yes'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â 
+</span><span style='mso-spacerun:yes'>Â Â Â </span><span
+style='mso-spacerun:yes'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â </span><span
+style='mso-spacerun:yes'>Â Â Â Â </span></span></b></a></span><b style='mso-bidi-font-weight:
 normal'><span lang=EN-IN style='mso-fareast-font-family:"Times New Roman";
 mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-IN'>13<o:p></o:p></span></b></p>
 
@@ -1799,10 +1799,10 @@ href="https://docs.google.com/document/d/18odhABfSi3qdBrJreyhvC2E-ix_X83z6QeGYK8
 style='mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:Arial;
 color:black;mso-fareast-language:EN-IN;text-decoration:none;text-underline:
 none'>6. Future Work<span style='mso-tab-count:1'> </span><span
-style='mso-spacerun:yes'>                                                                                   
-</span><span style='mso-spacerun:yes'>          </span><span
-style='mso-spacerun:yes'>                                     </span><span
-style='mso-spacerun:yes'>  </span></span></b></a></span><b style='mso-bidi-font-weight:
+style='mso-spacerun:yes'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â 
+</span><span style='mso-spacerun:yes'>Â Â Â Â Â Â Â Â Â Â </span><span
+style='mso-spacerun:yes'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â </span><span
+style='mso-spacerun:yes'>Â Â </span></span></b></a></span><b style='mso-bidi-font-weight:
 normal'><span lang=EN-IN style='mso-fareast-font-family:"Times New Roman";
 mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-IN'>15<o:p></o:p></span></b></p>
 
@@ -1811,19 +1811,19 @@ mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-IN'>15<o:p></o:p>
 href="https://docs.google.com/document/d/18odhABfSi3qdBrJreyhvC2E-ix_X83z6QeGYK8DGKBY/edit#heading=h.bjkeli233foi"><b><span
 style='mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:Arial;
 color:black;mso-fareast-language:EN-IN;text-decoration:none;text-underline:
-none'>7. Group Consent<span style='mso-tab-count:1'>           </span><span
-style='mso-spacerun:yes'>                                                         
-</span><span style='mso-spacerun:yes'>                                </span><span
-style='mso-spacerun:yes'>                    </span><span
-style='mso-spacerun:yes'>     </span><span style='mso-spacerun:yes'> </span><span
-style='mso-spacerun:yes'>   </span></span></b></a></span><b style='mso-bidi-font-weight:
+none'>7. Group Consent<span style='mso-tab-count:1'>Â Â Â Â Â Â Â Â Â Â  </span><span
+style='mso-spacerun:yes'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â 
+</span><span style='mso-spacerun:yes'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â </span><span
+style='mso-spacerun:yes'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â </span><span
+style='mso-spacerun:yes'>Â Â Â Â Â </span><span style='mso-spacerun:yes'>Â </span><span
+style='mso-spacerun:yes'>Â Â Â </span></span></b></a></span><b style='mso-bidi-font-weight:
 normal'><span lang=EN-IN style='mso-fareast-font-family:"Times New Roman";
 mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-IN'>16<o:p></o:p></span></b></p>
 
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
 justify;line-height:normal'><span lang=EN-IN style='font-size:12.0pt;
 font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
-mso-fareast-language:EN-IN'><span style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+mso-fareast-language:EN-IN'><span style='mso-spacerun:yes'>Â </span><o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
 justify;line-height:normal'><span lang=EN-IN style='font-size:12.0pt;
@@ -1964,10 +1964,10 @@ style='font-size:24.0pt;mso-fareast-font-family:"Times New Roman";mso-bidi-font-
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
 justify;line-height:normal'><span lang=EN-IN style='mso-fareast-font-family:
 "Times New Roman";mso-bidi-font-family:"Times New Roman";color:#222222;
-background:white;mso-fareast-language:EN-IN'>The aim of the project- ‘Trip
-Story’ is to create a Rebus Story (picture story) App that allows children to
+background:white;mso-fareast-language:EN-IN'>The aim of the project- Â‘Trip
+StoryÂ’ is to create a Rebus Story (picture story) App that allows children to
 form their personalized stories by answering a series of questions. These
-questions are designed to be engaging and test the user’s (children age: 4+)
+questions are designed to be engaging and test the userÂ’s (children age: 4+)
 creativity.</span><span lang=EN-IN style='mso-fareast-font-family:"Times New Roman";
 mso-bidi-font-family:"Times New Roman";color:black;mso-fareast-language:EN-IN'>
 The App provides a platform for the child to create their own stories with
@@ -1979,14 +1979,14 @@ mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-IN'><o:p></o:p></
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
 justify;line-height:normal'><span lang=EN-IN style='mso-fareast-font-family:
 "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black;
-mso-fareast-language:EN-IN'>The ‘Rebus story’ concept aims to promote early
+mso-fareast-language:EN-IN'>The Â‘Rebus storyÂ’ concept aims to promote early
 literacy by motivating children to participate in storytelling while also
 improving cognitive skills. The App thus caters to preschool children in
 improving their cognitive and literacy skills and is a useful asset in the field
 of education.<span style='background:white'> The preschool years are a
 signi&#64257;cant period of pre-reading development, in which children
 establish foundational skills in the areas of language (e.g., vocabulary,
-grammar) and literacy (e.g. print knowledge, phonological awareness) because pre-schooler’s
+grammar) and literacy (e.g. print knowledge, phonological awareness) because pre-schoolerÂ’s
 language and literacy skills are critically related to later academic success.</span>
 The App makes reading fun, entertaining, and help children develop a love of
 reading. The App aims at providing children with a path to create their own
@@ -2008,12 +2008,12 @@ style='mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New
 color:black;mso-fareast-language:EN-IN'>Children who particularly need to
 develop literacy skills can really improve and gain confidence and interest in
 reading using this App. Images, animations, pictures and colours fascinate
-children and thus a typical child’s story book has big images and very few
+children and thus a typical childÂ’s story book has big images and very few
 words. The child can learn to read by identifying their selected pictures in
 the App as cues as they read along with the parent. Viewing the glossary after
 each story can reinforce literacy and they can learn the words which adds to
 the educational value. Parental involvement is another important feature of the
-App that contributes to a child’s learning and development. Children with
+App that contributes to a childÂ’s learning and development. Children with
 parents who are involved in their education and learning tend to have fewer
 behavioural problems and better academic performance and more likely to
 complete high school than children whose parents are not involved in their
@@ -2243,11 +2243,11 @@ justify;line-height:normal'><span lang=EN-IN style='mso-fareast-font-family:
 "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black;
 mso-fareast-language:EN-IN'>The process of creating a story begins with this
 frame. Users are posed with a question and are given four options. There is no
-correct choice and the decisions are left to the user’s imagination. Each
+correct choice and the decisions are left to the userÂ’s imagination. Each
 choice is used to create a unique story. A lot of deliberation was put into the
 design of this View to make the experience more engaging for users. The size of
 the icons and the layout of elements on the screen were decided upon by
-consultation with the group’s Specialist and only implemented when each member
+consultation with the groupÂ’s Specialist and only implemented when each member
 of the group agreed with the result. Animations were also selectively inserted
 to capture the imaginations of the user and to make the app more interactive. </span><span
 lang=EN-IN style='font-size:12.0pt;mso-fareast-font-family:"Times New Roman";
@@ -2295,7 +2295,7 @@ and their choices in a form that can be shared with friends and family in the
 future. This scrollable form of the story is simply a summary of the previous
 selections. However, users are encouraged to access their newly created stories
 from the Rebus Story Library in order to save their stories to online storage
-and to ensure that they always have a copy of their child’s story! &nbsp;</span><span
+and to ensure that they always have a copy of their childÂ’s story! &nbsp;</span><span
 lang=EN-IN style='font-size:12.0pt;mso-fareast-font-family:"Times New Roman";
 mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-IN'><o:p></o:p></span></p>
 
@@ -2537,7 +2537,7 @@ mso-fareast-font-family:"Times New Roman";mso-fareast-language:EN-IN'><o:p>&nbsp
 6.0pt;margin-left:0in;text-align:justify;line-height:normal;mso-outline-level:
 1'><span lang=EN-IN style='font-size:20.0pt;mso-fareast-font-family:"Times New Roman";
 mso-bidi-font-family:Arial;color:black;mso-font-kerning:18.0pt;mso-fareast-language:
-EN-IN'>3. Overall Design – Block diagram, description of each part</span><b><span
+EN-IN'>3. Overall Design Â– Block diagram, description of each part</span><b><span
 lang=EN-IN style='font-size:24.0pt;mso-fareast-font-family:"Times New Roman";
 mso-bidi-font-family:"Times New Roman";mso-font-kerning:18.0pt;mso-fareast-language:
 EN-IN'><o:p></o:p></span></b></p>
@@ -2565,7 +2565,7 @@ mso-fareast-language:EN-IN'><o:p></o:p></span></p>
 justify;line-height:normal'><span lang=EN-IN style='mso-ascii-font-family:Calibri;
 mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Calibri;
 mso-bidi-font-family:"Times New Roman";color:black;mso-fareast-language:EN-IN'><span
-style='mso-spacerun:yes'>                                                     
+style='mso-spacerun:yes'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â 
 </span>Figure 3.1 Application Block Diagram</span><span lang=EN-IN
 style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
 "Times New Roman";mso-fareast-language:EN-IN'><o:p></o:p></span></p>
@@ -2695,13 +2695,13 @@ mso-bidi-font-family:Arial;mso-fareast-language:EN-IN'>Specialist: <o:p></o:p></
 margin-bottom:6.0pt;margin-left:.5in;mso-add-space:auto;text-align:justify;
 text-indent:-.25in;line-height:normal;mso-outline-level:2;mso-list:l4 level1 lfo7'><![if !supportLists]><span
 lang=EN-IN style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol;mso-fareast-language:EN-IN'><span style='mso-list:Ignore'>·<span
+Symbol;mso-fareast-language:EN-IN'><span style='mso-list:Ignore'>Â·<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><span lang=EN-IN style='mso-fareast-font-family:
 "Times New Roman";mso-bidi-font-family:Arial;mso-fareast-language:EN-IN'>Using
 photographic images instead of animated ones for the App would add to the
 educational value by presenting the child with real life scenario to better
-child’s understanding of the world and how it looks like. </span><span
+childÂ’s understanding of the world and how it looks like. </span><span
 lang=EN-IN style='font-size:16.0pt;mso-fareast-font-family:"Times New Roman";
 mso-bidi-font-family:Arial;mso-fareast-language:EN-IN'><o:p></o:p></span></p>
 
@@ -2857,7 +2857,7 @@ justify;line-height:normal'><span lang=EN-IN style='mso-fareast-font-family:
 mso-fareast-language:EN-IN'>Implemented an existing online storage system
 (Firebase) to create a backup of the created stories in the event that the
 local copy is lost. This feature ensures that the stories, which are a figment
-of the user’s imagination, can be preserved as they have inherent nostalgic
+of the userÂ’s imagination, can be preserved as they have inherent nostalgic
 value.</span><span lang=EN-IN style='font-size:12.0pt;mso-fareast-font-family:
 "Times New Roman";mso-bidi-font-family:"Times New Roman";mso-fareast-language:
 EN-IN'><o:p></o:p></span></p>
@@ -2875,7 +2875,7 @@ justify;line-height:normal'><span lang=EN-IN style='mso-fareast-font-family:
 "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black;
 mso-fareast-language:EN-IN'>Modified an existing library to implement a page
 flipper animation for the final story. The class within the library would only
-accept files that existed in the application’s resources folder. This was
+accept files that existed in the applicationÂ’s resources folder. This was
 changed to allow files in the DCIM folder to be displayed.</span><span
 lang=EN-IN style='font-size:12.0pt;mso-fareast-font-family:"Times New Roman";
 mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-IN'><o:p></o:p></span></p>
@@ -2908,7 +2908,7 @@ mso-fareast-language:EN-IN'><o:p></o:p></span></b></p>
 justify;line-height:normal'><span lang=EN-IN style='mso-fareast-font-family:
 "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black;
 mso-fareast-language:EN-IN'>Created a Rebus Story library using recycler views
-to allow users to easily “Like”, “Share” and “View” the stories. </span><span
+to allow users to easily Â“LikeÂ”, Â“ShareÂ” and Â“ViewÂ” the stories. </span><span
 lang=EN-IN style='font-size:12.0pt;mso-fareast-font-family:"Times New Roman";
 mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-IN'><o:p></o:p></span></p>
 
@@ -2923,7 +2923,7 @@ EN-IN'><o:p></o:p></span></b></p>
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
 justify;line-height:normal'><span lang=EN-IN style='mso-fareast-font-family:
 "Times New Roman";mso-bidi-font-family:"Times New Roman";color:black;
-mso-fareast-language:EN-IN'>Used application “intents” to transfer files
+mso-fareast-language:EN-IN'>Used application Â“intentsÂ” to transfer files
 between Trip Story and messaging applications to allow for the sharing of
 stories with friends and family.</span><span lang=EN-IN style='font-size:12.0pt;
 mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
@@ -3001,7 +3001,7 @@ mso-fareast-language:EN-IN'><o:p>&nbsp;</o:p></span></p>
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;text-align:
 justify;line-height:normal'><span lang=EN-IN style='font-size:12.0pt;
 mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
-mso-fareast-language:EN-IN'>A number of ideas were put forth by the group’s
+mso-fareast-language:EN-IN'>A number of ideas were put forth by the groupÂ’s
 specialist that were not implemented in the final version of the App due to
 time constraints:<o:p></o:p></span></p>
 
@@ -3048,7 +3048,7 @@ mso-fareast-language:EN-IN'><o:p>&nbsp;</o:p></span></p>
 margin-left:0in;text-align:justify;line-height:normal;mso-outline-level:2;
 tab-stops:365.25pt'><span lang=EN-IN style='font-size:16.0pt;mso-fareast-font-family:
 "Times New Roman";mso-bidi-font-family:Arial;mso-fareast-language:EN-IN'>6.3
-Additional Animations<span style='mso-tab-count:1'>                                                                                         </span></span><b><span
+Additional Animations<span style='mso-tab-count:1'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span></span><b><span
 lang=EN-IN style='font-size:18.0pt;mso-fareast-font-family:"Times New Roman";
 mso-bidi-font-family:"Times New Roman";mso-fareast-language:EN-IN'><o:p></o:p></span></b></p>
 
